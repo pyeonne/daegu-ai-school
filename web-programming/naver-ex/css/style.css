@@ -1,0 +1,4833 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    /*
+    여러 개의 폰트를 작성하는 이유는 브라우저마다 지원하는 폰트가 다르기 때문이다. 
+    */
+    /* font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif; */
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.clearcix {
+    clear: both;
+}
+
+.container {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+.shopBorder {
+    border: solid 1px #dae1e6;
+}
+
+/* 상단 영역 */
+#main_header {
+    position: relative;
+    background-color: #ffffff;
+}
+/*
+    코드를 작성할 때 자신만의 방법으로 일관성있게 작성하는 것이 좋다.
+    강사님의 경우 공간에 대한 속성 다음에 높이 넓이 배경색 다음에 폰트설정
+*/
+#main_header .search_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    height: 160px;
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #e4e8eb;
+}
+
+#main_header .search_wrap {
+    /*
+    input 요소와 button 요소를 한 줄에 배치하기
+    */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    width: 582px;
+    height: 52px;
+    border: solid 2px #19ce60;
+}
+
+#main_header .search_wrap input {
+    width: calc(100% - 52px);
+    height: 100%;
+    padding: 13px 15px;
+
+    font-size: 22px;
+    border: none;
+}
+
+/*
+마우스로 선택했을 때 포커싱된 요소의 외곽선을 제거하겠다
+디폴트 값으로 주는 편
+*/
+#main_header .search_wrap input:focus {
+    outline: none;
+}
+
+#main_header .search_wrap button {
+    width: 52px;
+    height: 100%;
+    background-color: #19ce60;
+}
+
+/* 그림자 */
+#main_header #navbar {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+#main_header #navbar ul {
+    padding: 11px 0;
+}
+
+#main_header #navbar ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#main_header #navbar ul li a {
+    color: #03c75a;
+    font-size: 15px;
+    font-weight: 700px;
+}
+
+/* 본문 영역 */
+main {
+    overflow: hidden;
+    /*
+    header요소와 main 요소 사이에 공백이 있음
+    header 요소의 padding bottom에 공백을 주거나
+    main 요소의 padding top에 공백을 줄 수 있음
+    개발자 취향 차이
+    */
+    padding-top: 20px;
+}
+
+main #main_left {
+    float: left;
+    width: 750px;
+    /* height: 2000px; */
+    /* background-color: yellow; */
+}
+
+main #main_right {
+    float: right;
+    width: 350px;
+    /* height: 2000px; */
+    /* background-color: pink; */
+}
+
+main #banner_wrap {
+    width: 750px;
+    height: 135px;
+    background-color: #000000;
+
+    margin-bottom: 12px;
+}
+
+main #news_wrap .news_header {
+    padding: 22px 0 16px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main #news_wrap .news_header h2 {
+    font-size: 14px;
+    font-weight: 700px;
+}
+
+main #news_wrap .news_header .news_btn_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 60px;
+}
+
+main #news_wrap .news_header .news_btn_wrap button {
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+}
+
+#news_wrap .news_lists {
+    overflow: hidden;
+    border: solid 1px #dae1e6;
+}
+
+#news_wrap .news_lists .news_list {
+    position: relative;
+    float: left;
+    width: 16.66%;
+    height: 65px;
+    background-color: #ffffff;
+
+    border-bottom: solid 1px #e4e8eb;
+    border-right: solid 1px #e4e8eb;
+
+    text-align: center;
+}
+
+/* #news_wrap .news_lists .news_list:nth-child(12), */
+/* #news_wrap .news_lists .news_list:nth-child(18), */
+/* #news_wrap .news_lists .news_list:nth-child(24) */
+#news_wrap .news_lists .news_list:nth-child(19),
+:nth-child(6n) {
+    border-right: none;
+}
+
+#news_wrap .news_lists .news_list:nth-child(19),
+#news_wrap .news_lists .news_list:nth-child(20),
+#news_wrap .news_lists .news_list:nth-child(21),
+#news_wrap .news_lists .news_list:nth-child(22),
+#news_wrap .news_lists .news_list:nth-child(23),
+#news_wrap .news_lists .news_list:nth-child(24) {
+    border-bottom: none;
+}
+
+#news_wrap .news_lists .news_list img {
+    position: relative;
+
+    /* Y축 중앙정렬 공식 꼭 기억하기! */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main #blog_wrap {
+    padding-top: 35px;
+}
+
+main #blog_wrap .blog_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 17px;
+}
+
+main #blog_wrap .blog_header .left_header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+main #blog_wrap .blog_header .left_header h3 {
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+main #blog_wrap .blog_header .left_header span {
+    font-size: 12px;
+    color: gray;
+}
+
+main #blog_wrap .blog_header .right_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main #blog_wrap .blog_header .right_header span {
+    font-size: 12px;
+    color: gray;
+}
+
+main #blog_wrap .blog_header .right_header .count strong {
+    color: #000000;
+}
+
+main #blog_wrap .blog_nav ul {
+    overflow: hidden;
+
+    border: solid 1px #dae1e6;
+}
+
+main #blog_wrap .blog_nav ul li {
+    float: left;
+    width: 12.5%;
+    height: 49px;
+
+    border-right: solid 1px #dae1e6;
+}
+
+main #blog_wrap .blog_nav ul li:last-child {
+    border-right: 0;
+}
+
+main #blog_wrap .blog_nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /* 동일한 높이값을 적용하면 Y축 중앙정렬됨 */
+    line-height: 49px;
+    text-align: center;
+}
+
+main #blog_wrap .blog_list_wrap {
+    padding-top: 19px;
+    border-bottom: solid 1px #dae1e6;
+}
+
+main #blog_wrap .blog_list_wrap li {
+    margin-bottom: 18px;
+}
+
+main #blog_wrap .blog_list_wrap li a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main #blog_wrap .blog_list_wrap li img {
+    width: 170px;
+    height: 114px;
+    margin-right: 21px;
+}
+
+main #blog_wrap .blog_list_wrap li .blog_list_info {
+    width: 559px;
+    padding-right: 47px;
+}
+
+main #blog_wrap .blog_list_wrap li .blog_list_info span {
+    font-size: 12px;
+    color: #35ae5e;
+}
+
+main #blog_wrap .blog_list_wrap li .blog_list_info h4 {
+    font-size: 13px;
+}
+
+main #blog_wrap .blog_list_wrap li .blog_list_info p {
+    font-size: 13px;
+}
+
+/* 캐스케이딩 */
+main #blog_wrap .blog_list_wrap li .blog_list_info .date_wrap span {
+    color: #505050;
+}
+
+main #blog_wrap .blog_media_wrap ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-bottom: solid 1px #dae1e6;
+}
+
+main #blog_wrap .blog_media_wrap ul .blog_media_info {
+    padding-top: 12px;
+}
+
+main #blog_wrap .blog_media_wrap ul .blog_media_info h4 {
+    font-size: 13px;
+}
+
+main #blog_wrap .blog_media_wrap ul .blog_media_info span {
+    font-size: 12px;
+}
+
+/* 07-20 */
+#main_right #account {
+    width: 100%;
+    border: solid 1px #dae1e6;
+    padding: 16px 16px 12px 16px;
+    margin-bottom: 12px;
+}
+
+#main_right #account p {
+    font-size: 12px;
+    padding-left: 3px;
+    margin-bottom: 11px;
+}
+
+#main_right #account a {
+    display: block;
+    width: 100%;
+    background-color: #19ce60;
+    border-radius: 2px;
+
+    padding: 15px 0;
+    margin-bottom: 14px;
+
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#main_right #account .account_sub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8px;
+}
+
+#main_right #account .account_sub span {
+    font-size: 12px;
+}
+
+#main_right #banner {
+    width: 348px;
+    height: 198px;
+    background-color: #000000;
+
+    margin-bottom: 20px;
+}
+
+#main_right #shop_wrap .shop_title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+}
+
+#main_right #shop_wrap .shop_title h3,
+#main_right #shop_wrap .shop_title h4 {
+    font-size: 13px;
+}
+#main_right #shop_wrap .shop_title h4 {
+    margin-left: 15px;
+}
+
+#main_right #shop_wrap .shop_title .right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#main_right #shop_wrap .shop_content {
+    border: solid 1px #e4e8eb;
+    padding: 0 0 22px;
+}
+
+#main_right #shop_wrap .shop_content .shop_goods {
+    padding: 55px 8px;
+}
+
+/*
+갯수가 정확하게 떨어지지 않으면 여백의 크기가 깔끔하게 나눠지지 않아 보기 싫음
+이럴 땐 float: left 를 사용하는 것을 권장함
+지금은 li요소를 4개 더 추가하여 짝을 맞춰 줌
+*/
+#main_right #shop_wrap .shop_content .commerce_lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 12px 4px;
+    background-color: #f7f9fa;
+    border-bottom: solid 1px #dae1e6;
+}
+
+#main_right #shop_wrap .shop_content .commerce_lists li {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+#main_right #shop_wrap .shop_content .commerce_lists li:nth-child(1),
+#main_right #shop_wrap .shop_content .commerce_lists li:nth-child(8) {
+    margin-left: 0;
+}
+
+#main_right #shop_wrap .product_lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main_right #shop_wrap .product_lists li {
+    margin-bottom: 10px;
+}
+
+#main_right #shop_wrap .product_lists .product_info {
+    text-align: center;
+}
+
+#main_right #shop_wrap .product_lists h3,
+#main_right #shop_wrap .product_lists span {
+    font-size: 12px;
+}
+
+/* 하단 영역 */
+#main_footer {
+    background-color: #fafbfc;
+    border-top: solid 1px #e4e8eb;
+    padding-bottom: 92px;
+}
+
+#main_footer .news_lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 0;
+}
+
+#main_footer .news_lists li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main_footer .news_lists li img {
+    margin-right: 15px;
+}
+
+#main_footer .news_lists li .news_info {
+    width: 172px;
+}
+
+#main_footer .news_lists li .news_info span,
+#main_footer .news_lists li .news_info h3,
+#main_footer .news_lists li .news_info p {
+    font-size: 13px;
+}
+
+#main_footer .news_lists li .news_info span {
+    color: #58c464;
+}
+
+#main_footer .corp_lists {
+    padding-top: 25px;
+    border-top: solid 1px #e4e8eb;
+}
+
+#main_footer .corp_lists li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 첫번째 요소 작대기 제거 */
+#main_footer .corp_lists li:first-child::before {
+    content: initial;
+}
+
+#main_footer .corp_lists li:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background-color: #e4e8eb;
+    margin: 0 8px;
+
+    /* 작대기를 조금 내림 */
+    vertical-align: -1px;
+}
+
+#main_footer .corp_lists li a {
+    font-size: 12px;
+}
+
+/* 07-21 */
+
+/* Shopping Page */
+
+/* CSS Reset */
+:root {
+    /* Color */
+    --background-color: #e9ecef;
+    --white-color: #ffffff;
+    --green-color: #03c75a;
+
+    /* Size */
+    --padding: 16px;
+
+    /* Border */
+    --border-basic: solid 1px #e8e8e8;
+}
+
+.shopContainer {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#shopBody {
+    background-color: var(--background-color);
+}
+
+.shopBorder {
+    border: solid 1px #ced2d7;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+#shopMain .listItem.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Shop Header */
+/* Shop Header Top */
+#shopHeader .shopHeaderTop {
+    width: 100%;
+    height: 36px;
+    background-color: var(--green-color);
+    border-bottom: var(--border-basic);
+}
+
+/* Shop Header Middle */
+#shopHeader .shopHeaderMiddle {
+    width: 100%;
+    height: 66px;
+    background-color: var(--green-color);
+}
+
+/* Shop Nav */
+#shopHeader .shopNav {
+    width: 100%;
+    background-color: var(--white-color);
+    border-top: var(--border-basic);
+    border-bottom: var(--border-basic);
+}
+
+#shopHeader .shopNav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 13px 0 8px 0;
+}
+
+#shopHeader .shopNav ul li {
+    margin-right: var(--padding);
+}
+
+/* Shop Main */
+#shopMain .shopContent {
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: var(--padding);
+}
+
+#shopMain .listWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#shopMain .listItem {
+    position: relative;
+    width: 308px;
+    height: 496px;
+    /* background-color: white; */
+
+    margin-left: var(--padding);
+    margin-bottom: var(--padding);
+}
+
+#shopMain .listItem .listBorder {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #ced2d7;
+    z-index: 1;
+}
+
+#shopMain .listItem .categoryWrap {
+    overflow: hidden;
+}
+
+/* Category Left */
+#shopMain .listItem .categoryWrap .categoryLeft {
+    float: left;
+    width: 124px;
+    height: 100%;
+    background-color: #333949;
+}
+
+#shopMain .listItem .categoryWrap .categoryLeft h3 {
+    padding: 14px 0 14px 13px;
+    border-bottom: 1px solid #2b313f;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.46);
+}
+
+#shopMain .listItem .categoryWrap .categoryLeft ul {
+}
+
+#shopMain .listItem .categoryWrap .categoryLeft li {
+}
+
+#shopMain .listItem .categoryWrap .categoryLeft a {
+    position: relative;
+    display: block;
+    padding: 7px 8px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.46);
+    font-weight: 700;
+}
+
+/* Category Right */
+#shopMain .listItem .categoryWrap .categoryRight {
+    float: right;
+    width: 184px;
+    height: 100%;
+    background-color: var(--white-color);
+}
+
+/* Category Right Top */
+.categoryRightTop {
+    width: 100%;
+    height: 306px;
+    border-bottom: 1px solid #e7e7e7;
+
+    text-align: center;
+}
+
+#shopMain .listItem .categoryWrap .categoryRightTop .categoryInfo {
+    padding: 20px 0;
+}
+
+#shopMain .listItem .categoryWrap .categoryRight .headLine {
+    display: inline-block;
+
+    font-size: 12px;
+    border: 1px solid #00ab33;
+    color: #00ab33;
+
+    margin-bottom: 7px;
+}
+
+#shopMain .listItem .categoryWrap .categoryRightTop .categoryInfo h3 {
+    font-size: 18px;
+}
+
+#shopMain .listItem .categoryWrap .categoryRightTop .categoryInfo .price {
+    font-size: 16px;
+    color: skyblue;
+}
+
+#shopMain .listItem .categoryWrap .categoryRightBottom {
+    padding-top: 20px;
+
+    text-align: center;
+}
+
+#shopMain .listItem .categoryWrap .categoryRightBottom .tagWrap .tag {
+    display: inline-block;
+    width: auto;
+    max-width: 75px;
+    height: 24px;
+    background-color: #e8eef4;
+
+    margin: 6px 1px 0 1px;
+    padding: 0 5px;
+
+    line-height: 26px;
+    font-size: 12px;
+    color: #666;
+    vertical-align: top;
+}
+
+/* 07-22 */
+/* Third List Item */
+#shopMain .listItem .listHalf {
+    width: 100%;
+    height: 240px;
+    background-color: #ffffff;
+}
+
+#shopMain .listItem .listHalf.listHalfTop {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#shopMain .listItem .listHalf.listHalfBottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* List Half Top */
+#shopMain .listItem .listHalf .listHalfHeader {
+    position: relative;
+    width: 100%;
+    height: 62px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e7e7e7;
+
+    text-align: center;
+
+    padding-top: 10px;
+}
+
+#shopMain .listItem .listHalf .listHalfHeader .halfOverLay {
+    position: absolute;
+    width: 100%;
+    height: 62px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#shopMain .listItem .listHalf .listHalfHeader.listHalfBg {
+    background-color: green;
+    border-bottom: 1px solid var(--white-color);
+    padding-top: 0;
+}
+
+#shopMain .listItem .listHalf .listHalfHeader.listHalfBg .shopTitleBorder {
+    position: relative;
+    display: inline-block;
+    border: 1px solid var(--white-color);
+    padding: 2px 4px;
+
+    color: var(--white-color);
+
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*
+    부모 요소의 크기를 구체적으로 지정해야
+    자식 요소의 크기가 %단위로 제대로 적용된다.
+*/
+#shopMain .listItem .listHalf .contentLists {
+    overflow: hidden;
+    height: 177px;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists3 li {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    border-right: solid 1px #f0f0f0;
+
+    text-align: center;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists3 li:last-child {
+    border-right: none;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists3 li img {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+}
+#shopMain .listItem .listHalf .contentLists.contentLists3 li h3 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists3 li span {
+    font-size: 12px;
+}
+
+/* List Half Bottom */
+#shopMain .listItem .listHalf .listHalfHeader .headline {
+    display: inline-block;
+    border: 1px solid #000000;
+    padding: 2px 4px;
+    margin-bottom: 5px;
+}
+
+#shopMain .listItem .listHalf .listHalfHeader h3 {
+    font-size: 14px;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 11px;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists2 li {
+    width: 130px;
+    height: 150px;
+    margin-right: 8px;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists2 li:last-child {
+    margin-right: none;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists2 li .contentImageWrap {
+    position: relative;
+    width: 130px;
+    height: 90px;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists2 li .contentImageWrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists2 li .contentImageWrap .discount {
+    position: absolute;
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-color: orange;
+    border-radius: 50%;
+
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 42px;
+    text-align: center;
+
+    top: 6px;
+    right: 5px;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists2 li h3 {
+    font-size: 13px;
+}
+
+#shopMain .listItem .listHalf .contentLists.contentLists2 li .price {
+    color: #62a7ee;
+    font-size: 12px;
+}
+
+/*
+    <em> 태그의 기본 스타일은 이탤릭체.
+*/
+#shopMain .listItem .listHalf .contentLists.contentLists2 li .price em {
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Forth List Item */
+#shopMain .listItem .listRowThree {
+    background-color: white;
+}
+
+#shopMain .listItem .listRowThree li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    border-bottom: solid 1px #f0f0f0;
+    padding: 14px 19px 11px 19px;
+}
+
+#shopMain .listItem .listRowThree li:last-child {
+    border-bottom: none;
+}
+
+#shopMain .listItem .listRowThree li .listImageWrap {
+    width: 90px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+#shopMain .listItem .listRowThree li .listImageWrap img {
+    width: 100%;
+    height: 100%;
+}
+
+#shopMain .listItem .listRowThree li .listRowInfo span {
+    font-size: 12px;
+}
+
+#shopMain .listItem .listRowThree li .listRowInfo h3 {
+    font-size: 13px;
+}
+
+/* Brand Wrap */
+#shopMain .brandWrap {
+    background-color: white;
+}
+
+#shopMain .brandWrap .brandLists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 18px;
+}
+
+#shopMain .brandWrap .brandLists li {
+    width: 64px;
+    height: 64px;
+}
+
+#shopMain .brandWrap .brandLists li img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Shop Footer */
+#shopFooter {
+    padding-bottom: 180px;
+    text-align: center;
+}
+
+#shopFooter .policyWrap {
+    border-top: solid 2px #5d5d5d;
+    padding-top: 27px;
+    margin-bottom: 11px;
+}
+
+#shopFooter .policyWrap span {
+    font-size: 12px;
+}
+
+#shopFooter .policyWrap span:first-child:before {
+    content: initial;
+}
+
+#shopFooter .policyWrap span:before {
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 11px;
+    margin: 0 8px;
+    background-color: #d7d7d7;
+    vertical-align: -1px;
+}
+
+#shopFooter p {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 11px;
+}
+
+/* 07-29 */
+/* NAVER News Page */
+/*
+  flex 속성을 클래스화해서 사용하면 코드의 양을 줄일 수 있다.
+*/
+.news-container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.news-flex-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.news-flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#news-header {
+    background-color: #3f63bf;
+}
+
+/* News Header Left */
+#news-header .news-header-left {
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+#news-header .news-header-left ul li {
+    font-size: 15px;
+}
+
+#news-header .news-header-left ul li.on {
+    font-size: 20px;
+}
+
+#news-header .news-header-left ul li a {
+    color: #fff;
+}
+
+#news-header .news-header-left ul li a::before {
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background-color: #000;
+    opacity: 0.2;
+
+    margin: 0 10px;
+    vertical-align: -1px;
+}
+
+#news-header .news-header-left ul li:first-child a::before {
+    content: initial;
+}
+
+/* News Header Right */
+#news-header .news-header-right .btn-login {
+    width: 55px;
+    height: 25px;
+    border: solid 1px #000;
+
+    line-height: 25px;
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 12px;
+
+    margin-right: 20px;
+}
+
+#news-header .news-header-right .btn-menu {
+    width: 55px;
+    height: 55px;
+    background-color: #3f63bf;
+    border-left: solid 1px #000;
+    border-right: solid 1px #000;
+}
+
+/* Suv Nav */
+#news-header .sub-nav {
+    background-color: #fff;
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #e3e3e3;
+}
+
+#news-header .sub-nav ul {
+}
+
+#news-header .sub-nav ul li {
+    height: 46px;
+    width: auto;
+    margin-right: 16px;
+}
+
+#news-header .sub-nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 2px transparent;
+
+    font-weight: bold;
+
+    line-height: 46px;
+}
+
+#news-header .sub-nav ul li a.on {
+    border-bottom: solid 2px #3f63bf;
+    color: #3f63bf;
+}
+
+#news-header .sub-nav .news-search-wrap {
+    width: 280px;
+    height: 30px;
+    border: solid 1px #e1e1e1;
+    background-color: #fafafa;
+}
+
+#news-header .sub-nav .news-search-wrap input {
+    width: calc(100% - 30px);
+    height: 100%;
+    border: none;
+
+    font-size: 12px;
+    color: #888;
+    padding: 3px 9px;
+}
+
+#news-header .sub-nav .news-search-wrap input:focus {
+    outline: none;
+}
+
+#news-header .sub-nav .news-search-wrap .btn-search {
+    width: 30px;
+    height: 100%;
+    background-color: blue;
+}
+
+/* News Headline */
+#news-headline {
+    padding-top: 20px;
+}
+
+#news-headline .news-container {
+    border-bottom: solid 1px #000;
+    padding-bottom: 12px;
+}
+
+/* News Headline Menu Wrap */
+#news-headline .news-headline-menu-wrap {
+    margin-bottom: 15px;
+}
+
+#news-headline .news-headline-menu-wrap .main-lists {
+}
+
+#news-headline .news-headline-menu-wrap .main-lists li {
+    margin-right: 20px;
+
+    font-size: 15px;
+}
+
+#news-headline .news-headline-menu-wrap .main-lists li a {
+}
+
+#news-headline .news-headline-menu-wrap .sub-lists {
+}
+
+#news-headline .news-headline-menu-wrap .sub-lists li {
+    font-size: 12px;
+}
+
+#news-headline .news-headline-menu-wrap .sub-lists li a {
+}
+
+#news-headline .news-headline-menu-wrap .sub-lists li a::before {
+    display: inline-block;
+    content: '';
+
+    width: 1px;
+    height: 12px;
+    background-color: #e0e0e0;
+    margin: 0 5px;
+
+    vertical-align: -1px;
+}
+
+#news-headline .news-headline-menu-wrap .sub-lists li:first-child a::before {
+    content: none;
+}
+
+/* News Headline Lists */
+#news-headline .news-headline-lists {
+    margin-bottom: 12px;
+}
+
+#news-headline .news-headline-lists li {
+    width: 255px;
+    height: 178px;
+    border: solid 1px #ccc;
+}
+
+#news-headline .news-headline-lists li a {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+#news-headline .news-headline-lists li a article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#news-headline .news-headline-lists li a article h3 {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+
+    text-align: center;
+}
+
+#news-headline .news-headline-lists li a article .image-wrap {
+    position: relative;
+    width: 100%;
+    height: 132px;
+}
+
+#news-headline .news-headline-lists li a article .image-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#news-headline .news-headline-lists li a article .image-wrap .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#news-headline .news-headline-lists .headline-info {
+    position: absolute;
+    width: 100%;
+    padding: 15px 20px;
+
+    left: 0;
+    bottom: 0;
+
+    color: #fff;
+}
+
+#news-headline .news-headline-lists .headline-info div {
+    width: calc(100% - 38px);
+}
+
+#news-headline .news-headline-lists .headline-info i {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-color: black;
+    border-radius: 50%;
+
+    margin-right: 10px;
+}
+
+#news-headline .news-headline-lists .headline-info span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#news-headline .news-headline-lists .headline-info p {
+    display: inline;
+    font-size: 12px;
+}
+
+/* News Headline Arrows */
+#news-headline .news-headline-arrows {
+}
+
+#news-headline .news-headline-arrows .btn-wrap {
+    margin-right: 15px;
+}
+
+#news-headline .news-headline-arrows .btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: solid 1px #dcdddc;
+}
+
+#news-headline .news-headline-arrows .btn.btn-prev {
+    background-color: yellow;
+    border-right: none;
+}
+
+#news-headline .news-headline-arrows .btn.btn-next {
+    background-color: pink;
+}
+
+#news-headline .news-headline-arrows .btn.btn-up {
+    background-color: black;
+}
+
+/* News Main */
+#news-main .news-container {
+    overflow: hidden;
+}
+
+/* 07-30 */
+/* News Main Left */
+#news-main .news-left {
+    float: left;
+    width: 750px;
+    padding-right: 26px;
+    padding-bottom: 100px;
+}
+
+#news-main .news-left .news-main-wrap {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: solid 1px #dedede;
+}
+
+/* News Main Header */
+#news-main .news-left .news-main-wrap .news-main-header {
+    margin-bottom: 14px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-left {
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-left h3 {
+    margin-right: 12px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-left h3 a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-left a {
+    font-size: 13px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-left ul {
+    margin-top: -2px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-left li a::before {
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 10px;
+    background-color: #e5e5e5;
+
+    margin: 0 8px;
+    vertical-align: -1px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-left li:first-child a::before {
+    content: none;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-right i {
+    display: block;
+    width: 24px;
+    height: 20px;
+
+    margin-left: 8px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-right i.icon-1 {
+    background-color: yellow;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-right i.icon-2 {
+    background-color: pink;
+}
+
+#news-main .news-left .news-main-wrap .news-main-header-right i.icon-3 {
+    background-color: gray;
+}
+
+/* News Main Body */
+#news-main .news-left .news-main-wrap .news-main-body .image-wrap {
+    width: 220px;
+    margin-right: 25px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-body .image-wrap img {
+    width: 100%;
+    height: 140px;
+    border: solid 1px #000;
+    margin-bottom: 6px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-body .image-wrap h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-body .news-lists {
+    width: 430px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-body .news-lists li {
+    margin-bottom: 11px;
+    font-size: 20px;
+}
+
+#news-main .news-left .news-main-wrap .news-main-body .news-lists li a {
+    display: inline-block;
+    max-width: 360px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#news-main .news-left .news-main-wrap .news-main-body .news-lists li span {
+    font-size: 12px;
+    color: #888;
+
+    vertical-align: middle;
+}
+
+#news-main .news-left .news-main-wrap .news-main-body .news-lists li span::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 11px;
+    background-color: gray;
+
+    margin: 0 4px;
+
+    top: 1px;
+}
+
+/* News Main Wrap - 헤드라인 뉴스 */
+#news-main .news-left .news-main-wrap.news-custom .news-main-header ul li a {
+    cursor: default;
+}
+
+#news-main .news-left .news-main-wrap.news-custom .news-main-header ul li:first-child a::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #e5e5e5;
+
+    margin: 0 8px 0 0;
+    vertical-align: -1px;
+}
+
+#news-main .news-left .news-main-wrap.news-custom .news-main-body .image-wrap {
+    position: relative;
+    width: 300px;
+    height: 190px;
+}
+
+#news-main .news-left .news-main-wrap.news-custom .news-main-body .image-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#news-main .news-left .news-main-wrap.news-custom .news-main-body .image-wrap h4 {
+    text-overflow: initial;
+    white-space: initial;
+
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    padding: 10px 15px;
+
+    left: 0;
+    bottom: 0;
+
+    color: #fff;
+    text-align: center;
+}
+
+#news-main .news-left .news-main-wrap.news-custom .news-main-body .news-lists {
+    width: 390px;
+}
+
+#news-main .news-left .news-main-wrap.news-custom .news-main-body .news-lists li a {
+    vertical-align: middle;
+    width: 360px;
+    max-width: initial;
+}
+
+#news-main .news-left .news-main-wrap.news-custom .news-main-body .news-lists li i {
+    display: inline-block;
+    width: 22px;
+    height: 16px;
+    background-color: black;
+
+    vertical-align: middle;
+}
+
+/* News Main Right */
+#news-main .news-right {
+    float: right;
+    width: 327px;
+    border-left: solid 1px #dfdfdf;
+    padding: 25px 0 40px 26px;
+}
+
+/* News Popular */
+#news-main .news-right .news-popular {
+    margin-bottom: 30px;
+}
+
+/* News Popular Header */
+#news-main .news-right .news-popular .news-popular-header {
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+#news-main .news-right .news-popular .news-popular-header h3 {
+    font-size: 14px;
+}
+
+#news-main .news-right .news-popular .news-popular-header p {
+    font-size: 12px;
+}
+
+#news-main .news-right .news-popular .news-popular-header span {
+    color: #7d7d7d;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* News Polular Lists */
+#news-main .news-right .news-popular .news-popular-lists {
+}
+
+#news-main .news-right .news-popular .news-popular-lists li {
+    padding: 6px 0;
+}
+
+#news-main .news-right .news-popular .news-popular-lists li .news-polular-info {
+    align-items: flex-end;
+    width: 202px;
+
+    border-bottom: solid 1px #e3e3e3;
+    padding-bottom: 6px;
+}
+
+#news-main .news-right .news-popular .news-popular-lists li .news-polular-info h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+#news-main .news-right .news-popular .news-popular-lists li .news-polular-info h4 a {
+}
+
+#news-main .news-right .news-popular .news-popular-lists li .news-polular-info i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: gray;
+    border-radius: 50%;
+
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#news-main .news-right .news-popular .news-popular-lists li .news-polular-info span {
+    position: relative;
+
+    font-size: 12px;
+    color: #888;
+
+    vertical-align: middle;
+
+    top: 2px;
+}
+
+#news-main .news-right .news-popular .news-popular-lists li img {
+}
+
+#news-main .news-right .news-banner {
+    width: 300px;
+    height: 250px;
+    background-color: #000;
+    border: solid 1px #e3e3e3;
+
+    margin-bottom: 30px;
+}
+
+/* News Today */
+#news-main .news-right .news-today {
+}
+
+/* News Today Header */
+#news-main .news-right .news-today .news-today-header {
+    margin-bottom: 11px;
+}
+
+#news-main .news-right .news-today .news-today-header h3 {
+    font-size: 14px;
+}
+
+#news-main .news-right .news-today .news-today-header span {
+    font-size: 12px;
+}
+
+#news-main .news-right .news-today .news-today-header span::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #e5e5e5;
+
+    margin: 0 7px;
+    vertical-align: -1px;
+}
+
+/* News Today Body */
+#news-main .news-right .news-today .news-today-body {
+    padding: 13px 20px 20px;
+    border: solid 1px #e8e8e8;
+}
+
+/* News Notice Lists */
+#news-main .news-right .news-today .news-today-body .news-notice-lists {
+}
+
+#news-main .news-right .news-today .news-today-body .news-notice-lists li {
+    border-bottom: solid 1px #f2f2f2;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+#news-main .news-right .news-today .news-today-body .news-notice-lists li:last-child {
+    margin-bottom: 0;
+}
+
+#news-main .news-right .news-today .news-today-body .news-notice-lists li h4 {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#news-main .news-right .news-today .news-today-body .news-notice-lists li p {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+/* News Stock Lists */
+#news-main .news-right .news-today .news-today-body .news-stock-lists {
+    padding: 10px 0 7px;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-lists li {
+    width: 50%;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-lists li:last-child {
+    padding-left: 20px;
+    border-left: solid 1px #f2f2f2;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-lists span {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-lists h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-lists em {
+    font-style: normal;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-lists em.down {
+    color: #066fd1;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-lists em.up {
+    color: #fe4628;
+}
+
+/* News Stock Search Wrap */
+#news-main .news-right .news-today .news-today-body .news-stock-search-wrap {
+    width: 100%;
+    height: 30px;
+    border: solid 1px #f2f2f2;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-search-wrap input {
+    width: calc(100% - 30px);
+    height: 100%;
+    background-color: #fff;
+    border: none;
+    padding: 3px 9px;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-search-wrap input:focus {
+    outline: none;
+}
+
+#news-main .news-right .news-today .news-today-body .news-stock-search-wrap button {
+    width: 30px;
+    height: 100%;
+    background-color: black;
+}
+
+/* News Nav Bottom */
+#news-nav-bottom {
+    border-top: solid 1px #dfdfdf;
+    border-bottom: solid 1px #e3e7ee;
+
+    padding: 15px 0;
+}
+
+#news-nav-bottom li {
+    margin-right: 10px;
+}
+
+/* 08-02 */
+/* ENT Page */
+.ent-container {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.ent-flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ent-flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ent-flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ent-flex-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ent-border {
+    border: solid 1px #000;
+}
+
+/* ENT Header */
+#ent-header {
+    width: 100%;
+    height: 62px;
+    background-color: #fff;
+    border-bottom: solid 2px #f1f1f1;
+
+    padding: 20px 25px 0;
+}
+
+/* ENT Header Left */
+#ent-header .ent-header-left ul {
+}
+
+#ent-header .ent-header-left ul li {
+    font-weight: 700;
+}
+
+#ent-header .ent-header-left ul li a {
+}
+
+#ent-header .ent-header-left ul li:last-child a {
+    color: #9f9f9f;
+}
+
+#ent-header .ent-header-left ul li a::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #ddd;
+
+    margin: 0 8px;
+
+    vertical-align: -1px;
+}
+
+#ent-header .ent-header-left ul li:first-child a::before {
+    content: none;
+}
+
+/* ENT Header Center */
+#ent-header .ent-header-center li {
+    font-weight: 700;
+    font-size: 16px;
+
+    padding: 0 15px;
+}
+
+#ent-header .ent-header-center li a {
+    display: inline-block;
+    border-bottom: solid 1px #fff;
+
+    padding-bottom: 2px;
+}
+
+#ent-header .ent-header-center li.on {
+}
+
+#ent-header .ent-header-center li.on a {
+    color: #e24587;
+    border-bottom: solid 2px #e24587;
+}
+
+/* ENT Header right */
+#ent-header .ent-header-right .btn-login {
+    width: 45px;
+    height: 20px;
+    border: solid 1px #000;
+
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 9px;
+}
+
+#ent-header .ent-header-right .btn-menu {
+    width: 16px;
+    height: 16px;
+    background-color: gray;
+    margin: 0 9px;
+}
+
+#ent-header .ent-header-right .btn-search {
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    margin-left: 9px;
+}
+
+/* ENT Main */
+#ent-main {
+    /* margin-bottom: 1000px; */
+}
+
+#ent-main .ent-container {
+    overflow: hidden; /* 자식 요소의 높이값이 부모 요소에게 영향을 준다. */
+}
+
+/* ENT Main Left */
+#ent-main .ent-left {
+    float: left;
+    width: 654px;
+    /* height: 2000px; */
+    /* background-color: yellow; */
+    border-right: solid 1px #f1f1f1;
+
+    padding-right: 24px;
+}
+
+/* ENT Media Headline */
+#ent-main .ent-left .ent-media-headline {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #f1f1f1;
+}
+
+#ent-main .ent-left .ent-media-headline ul {
+}
+
+#ent-main .ent-left .ent-media-headline li {
+    width: 148px;
+    height: 204px;
+    border-radius: 10px;
+}
+
+#ent-main .ent-left .ent-media-headline a {
+    display: block;
+    /* li 요소를 기준으로 width 및 height가 100%의 공간을 가진다. */
+    width: 100%;
+    height: 100%;
+}
+
+#ent-main .ent-left .ent-media-headline .media-top {
+    position: relative;
+    height: 144px;
+}
+
+#ent-main .ent-left .ent-media-headline .media-top img {
+    /* img 요소 위에 .time과 .icon-play 요소를 배치하기위해서 레이어층 작업을 한 것 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#ent-main .ent-left .ent-media-headline .media-top .time {
+    position: absolute;
+    display: block;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.56);
+
+    padding: 0 4px;
+    right: 8px;
+    top: 8px;
+
+    color: #fff;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+#ent-main .ent-left .ent-media-headline .media-top .icon-play {
+    position: absolute;
+    display: block;
+
+    width: 28px;
+    height: 28px;
+    background-color: gray;
+    border-radius: 50%;
+
+    left: 8px;
+    bottom: 7px;
+}
+
+#ent-main .ent-left .ent-media-headline .media-bottom {
+    height: 60px;
+    background-color: #444a60;
+}
+
+#ent-main .ent-left .ent-media-headline .media-bottom p {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -1px; /* 글자간 좌우 간격을 조정하는 속성 */
+
+    padding: 11px 12px 0;
+
+    color: #fff;
+}
+
+/* ENT Section 1 */
+#ent-main .ent-left .ent-section-1 {
+}
+
+#ent-main .ent-left .ent-section-1 li {
+    border-bottom: solid 1px #f1f1f1;
+    padding: 20px 0;
+}
+
+#ent-main .ent-left .ent-section-1 li img {
+    width: 148px;
+    height: 90px;
+    border: solid 1px #000;
+}
+
+#ent-main .ent-left .ent-section-1 li .ent-news-wrap {
+    width: 462px;
+}
+
+#ent-main .ent-left .ent-section-1 li .ent-news-wrap h3 {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#ent-main .ent-left .ent-section-1 li .ent-news-wrap p {
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    color: #898989;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+#ent-main .ent-left .ent-section-1 li .bottom-wrap .source,
+#ent-main .ent-left .ent-section-2 .ent-bottom .source {
+    font-size: 11px;
+    font-weight: 400;
+    color: #a7a7a7;
+}
+
+#ent-main .ent-left .ent-section-1 li .bottom-wrap .count,
+#ent-main .ent-left .ent-section-2 .ent-bottom .count {
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    border: solid 1px #000;
+    border-radius: 5px;
+
+    text-align: center;
+    line-height: 20px;
+
+    font-size: 10px;
+}
+
+/* ENT Section 2 */
+#ent-main .ent-left .ent-section-2 {
+    border-bottom: solid 1px #f1f1f1;
+    padding: 20px 0;
+}
+
+#ent-main .ent-left .ent-section-2 li {
+    width: 200px;
+}
+
+#ent-main .ent-left .ent-section-2 img {
+    width: 200px;
+    height: 122px;
+    border: solid 1px #000;
+
+    margin-bottom: 15px;
+}
+
+#ent-main .ent-left .ent-section-2 h3 {
+    font-size: 13px;
+    line-height: 20px;
+
+    margin-bottom: 9px;
+}
+
+/* ENT Section 3 */
+#ent-main .ent-left .ent-section-3 {
+    padding: 24px 0;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+#ent-main .ent-left .ent-section-3 .title-wrap {
+    margin-bottom: 18px;
+}
+
+#ent-main .ent-left .ent-section-3 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-left .ent-section-3 .right-wrap {
+}
+
+#ent-main .ent-left .ent-section-3 .right-wrap .count-wrap {
+}
+
+#ent-main .ent-left .ent-section-3 .right-wrap .count-wrap span {
+    font-size: 12px;
+    color: #666;
+}
+
+#ent-main .ent-left .ent-section-3 .right-wrap .count-wrap span em {
+    font-style: normal;
+    color: #ff0080;
+}
+
+#ent-main .ent-left .ent-section-3 .btn-wrap {
+    margin-left: 8px;
+}
+
+#ent-main .ent-left .ent-section-3 .btn-wrap .btn {
+    width: 24px;
+    height: 24px;
+    border: solid 1px #000;
+}
+
+#ent-main .ent-left .ent-section-3 .btn-wrap .btn-prev {
+    border-right: none;
+    background-color: blue;
+}
+
+#ent-main .ent-left .ent-section-3 .btn-wrap .btn-next {
+    background-color: green;
+}
+
+#ent-main .ent-left .ent-section-3 ul {
+}
+
+#ent-main .ent-left .ent-section-3 li {
+    width: 148px;
+    height: 148px;
+    border: solid 1px #000;
+}
+
+#ent-main .ent-left .ent-section-3 li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#ent-main .ent-left .ent-section-3 li img {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+#ent-main .ent-left .ent-section-3 li span {
+    position: absolute;
+    display: block;
+    max-width: 100%;
+    background-color: #f40080;
+
+    padding: 0 5px;
+
+    left: 0;
+    top: 0;
+
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+
+    /* 
+        한줄 말줄임표시 
+        display는 block, max-width는 100%로 지정해야 함
+        실무에서 많이 사용하므로 꼭 기억해두기!
+    */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#ent-main .ent-left .ent-section-3 li h3 {
+    position: absolute;
+    width: 100%;
+    min-height: 32px; /* 최소 높이값 */
+    background-color: rgba(0, 0, 0, 0.3);
+
+    padding: 9px 10px 8px;
+
+    left: 0;
+    bottom: 0;
+
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ENT Section 4 */
+#ent-main .ent-left .ent-section-4 {
+    padding: 23px 0;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+#ent-main .ent-left .ent-section-4 .title-wrap {
+    /* margin-bottom: 18px; */
+}
+
+#ent-main .ent-left .ent-section-4 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-left .ent-section-4 ul {
+}
+
+#ent-main .ent-left .ent-section-4 li {
+    padding: 18px 0;
+    border-bottom: solid 1px #f1f1f1;
+}
+
+/* .btn-more 버튼의 상단 테두리랑 겹쳐서 마지막 li 요소의 border-bottom은 제거함 */
+#ent-main .ent-left .ent-section-4 li:last-child {
+    border-bottom: none;
+}
+
+#ent-main .ent-left .ent-section-4 a {
+}
+
+#ent-main .ent-left .ent-section-4 .ent-info {
+    width: 528px;
+}
+
+#ent-main .ent-left .ent-section-4 .ent-info h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+#ent-main .ent-left .ent-section-4 .ent-info p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #898989;
+
+    margin-bottom: 9px;
+}
+
+#ent-main .ent-left .ent-section-4 .ent-info .source {
+    font-size: 11px;
+    font-weight: 400;
+    color: #a7a7a7;
+}
+
+#ent-main .ent-left .ent-section-4 li img {
+    width: 88px;
+    height: 88px;
+    border: solid 1px #000;
+}
+
+#ent-main .ent-left .ent-section-4 .btn-more {
+    display: block; /*button은 inline-block 요소이므로 block으로 변경함 */
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff; /* button의 색깔은 기본적으로 회색을 가지고 있기때문에 흰색으로 변경함 */
+    border: solid 1px #e8e8e8;
+
+    text-align: center;
+
+    color: #444;
+}
+
+/* ENT Section 5 */
+#ent-main .ent-left .ent-section-5 {
+    padding: 24px 0 14px;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+/* 
+    .title-wrap 요소같이 각 Seciton마다 중복되는 요소가 있는 경우
+    default Class로 따로 빼는 것도 좋다.
+*/
+#ent-main .ent-left .ent-section-5 .title-wrap {
+    margin-bottom: 20px;
+}
+
+#ent-main .ent-left .ent-section-5 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-left .ent-section-5 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+
+#ent-main .ent-left .ent-section-5 ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#ent-main .ent-left .ent-section-5 li {
+    width: 80px;
+}
+
+#ent-main .ent-left .ent-section-5 li a {
+    display: block;
+
+    /* 커서가 손가락 모양으로 바뀌는 영역을 넓히기 위해 width와 height를 100%로 적용 */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#ent-main .ent-left .ent-section-5 li img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    margin-bottom: 10px;
+}
+
+#ent-main .ent-left .ent-section-5 li h4 {
+    font-size: 12px;
+    font-weight: 700;
+    /* h4의 텍스트가 한줄이 아니라 두줄일 수도 있기 때문에 line-height 적용 */
+    line-height: 16px;
+}
+
+/* ENT Section 6 */
+#ent-main .ent-left .ent-section-6 {
+    padding: 24px 0;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+#ent-main .ent-left .ent-section-6 .title-wrap {
+    margin-bottom: 17px;
+}
+
+#ent-main .ent-left .ent-section-6 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-left .ent-section-6 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+
+#ent-main .ent-left .ent-section-6 ul {
+}
+
+#ent-main .ent-left .ent-section-6 li {
+    width: 148px;
+}
+
+#ent-main .ent-left .ent-section-6 ul .img-wrap {
+    position: relative;
+    width: 148px;
+    height: 85px;
+    border: solid 1px #000;
+
+    margin-bottom: 10px;
+}
+
+#ent-main .ent-left .ent-section-6 ul .img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#ent-main .ent-left .ent-section-6 ul .img-wrap .icon-play {
+    position: absolute;
+    display: block; /* i태그이기 때문에 block으로 변경한 것 */
+
+    width: 28px;
+    height: 28px;
+    background-color: gray;
+    border-radius: 50%;
+
+    left: 8px;
+    bottom: 7px;
+}
+
+#ent-main .ent-left .ent-section-6 ul h4 {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+#ent-main .ent-left .ent-section-6 span {
+    font-size: 11px;
+    color: #141414;
+}
+
+#ent-main .ent-left .ent-section-6 ul .source {
+    color: #999;
+}
+
+#ent-main .ent-left .ent-section-6 ul .source::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background-color: #d3d3d3;
+
+    vertical-align: top;
+
+    margin: 9px 2px 0 4px;
+}
+
+#ent-main .ent-left .ent-section-6 ul .program::after {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+
+    vertical-align: top;
+
+    margin: 7px 2px 0 4px;
+}
+
+/* ENT Section 8 */
+#ent-main .ent-left .ent-section-8 {
+    padding: 24px 0 20px;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+#ent-main .ent-left .ent-section-8 .title-wrap {
+    margin-bottom: 17px;
+}
+
+#ent-main .ent-left .ent-section-8 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-left .ent-section-8 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap {
+    align-items: stretch;
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap .left {
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap .left img {
+    width: 200px;
+    height: 122px;
+    margin-bottom: 11px;
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap .left h4 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap .right {
+    width: 412px;
+    margin-left: 18px;
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap .right ul {
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap .right li {
+    margin-bottom: 10px;
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap .right li:last-child {
+    margin-bottom: 0;
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap .right a {
+    display: inline-block;
+    margin-right: 5px;
+    max-width: 363px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#ent-main .ent-left .ent-section-8 .movie-wrap .right span {
+    vertical-align: top; /* 윗쪽 선상에 맞춰서 정렬 */
+
+    font-size: 11px;
+    color: #898989;
+}
+
+/* ENT Section 9 */
+#ent-main .ent-left .ent-section-9 {
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap {
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap div {
+    align-items: flex-start;
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap ul {
+    /* position을 relative로 적용해 top속성으로 텍스트를 윗쪽 선상으로 정렬시킴 */
+    position: relative;
+    top: -4px;
+    margin-left: 19px;
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap li {
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap li a {
+    font-size: 12px;
+    color: #181818;
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap li a::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #282828;
+
+    margin: 0 10px;
+
+    vertical-align: -1px;
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap li:first-child a::before {
+    content: none;
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap li a.on {
+    font-weight: 700;
+    color: #e2458f;
+    border-bottom: solid 1px #e2458f;
+}
+
+#ent-main .ent-left .ent-section-9 .title-wrap .more {
+    font-size: 12px;
+    color: #999;
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists {
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists li {
+    padding: 18px 0;
+    border-bottom: solid 1px #f1f1f1;
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists a {
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists .rank {
+    display: block;
+    width: 40px;
+    text-align: center;
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists .news-info-wrap {
+    width: calc(100% - 40px);
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists .news-info-wrap img {
+    width: 88px;
+    height: 88px;
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists .news-info-txt {
+    width: 486px;
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists .news-info-txt h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists .news-info-txt p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #898989;
+    margin-bottom: 8px;
+}
+
+#ent-main .ent-left .ent-section-9 .news-lists .news-info-txt span {
+    font-size: 11px;
+    color: #898989;
+}
+
+/* ENT Section 10 */
+#ent-main .ent-left .ent-section-10 {
+    padding: 24px 0 20px;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+#ent-main .ent-left .ent-section-10 .title-wrap {
+    margin-bottom: 17px;
+}
+
+#ent-main .ent-left .ent-section-10 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-left .ent-section-10 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+
+#ent-main .ent-left .ent-section-10 ul {
+}
+
+#ent-main .ent-left .ent-section-10 li {
+    width: 200px;
+    border: solid 1px #000;
+}
+
+#ent-main .ent-left .ent-section-10 a {
+    display: block;
+}
+
+#ent-main .ent-left .ent-section-10 li img {
+    width: 100%; /* 200px로 적용하면 테두리가 보이지 않는 오류 발생. 그래서 width를 100%로 적용 */
+    height: 122px;
+}
+
+#ent-main .ent-left .ent-section-10 li .txt-wrap {
+    padding: 13px 14px 18px;
+}
+
+#ent-main .ent-left .ent-section-10 li .txt-wrap span {
+    font-size: 11px;
+}
+
+#ent-main .ent-left .ent-section-10 li .txt-wrap .program {
+    color: #ff0080;
+}
+
+#ent-main .ent-left .ent-section-10 li .txt-wrap .program::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background-color: #d3d3d3;
+
+    vertical-align: top;
+
+    margin: 9px 2px 0 4px;
+}
+
+#ent-main .ent-left .ent-section-10 li .txt-wrap .source {
+    color: #999;
+}
+
+#ent-main .ent-left .ent-section-10 li .txt-wrap h4 {
+    padding-top: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    min-height: 26px;
+}
+
+/* ENT Main Right */
+#ent-main .ent-right {
+    float: right;
+    width: 324px;
+    height: 2000px;
+    /* background-color: pink; */
+
+    padding-left: 24px;
+}
+
+/* ENT Banner */
+#ent-main .ent-right .ent-banner {
+    width: 300px;
+    height: 250px;
+    background-color: gray;
+
+    border: solid 1px #000;
+
+    margin-bottom: 30px;
+}
+
+/* ENT Section 11 */
+#ent-main .ent-right .ent-section-11 {
+    padding-bottom: 12px;
+    border-bottom: solid 1px #e8e8e8;
+}
+
+#ent-main .ent-right .ent-section-11 .title-wrap {
+    margin-bottom: 8px;
+}
+
+#ent-main .ent-right .ent-section-11 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-right .ent-section-11 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+
+#ent-main .ent-right .ent-section-11 ol {
+}
+
+#ent-main .ent-right .ent-section-11 ol li {
+    margin-bottom: 10px;
+}
+
+#ent-main .ent-right .ent-section-11 ol li a {
+}
+
+#ent-main .ent-right .ent-section-11 ol li .rank {
+    display: inline-block;
+    width: 16px;
+
+    font-size: 16px;
+    color: #e2458f;
+
+    text-align: center;
+}
+
+#ent-main .ent-right .ent-section-11 ol li p {
+    display: inline-block;
+    width: 270px;
+    vertical-align: middle; /* span태그와 p태그를 한줄로 정렬하기 위함 */
+    font-size: 12px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ENT Section 12 */
+#ent-main .ent-right .ent-section-12 ul {
+    margin-bottom: 12px;
+}
+
+#ent-main .ent-right .ent-section-12 ul li {
+    padding: 14px;
+    border-bottom: solid 1px #f2f2f2;
+}
+
+#ent-main .ent-right .ent-section-12 ul a {
+}
+
+#ent-main .ent-right .ent-section-12 ul .title-wrap {
+    margin-bottom: 10px;
+}
+
+#ent-main .ent-right .ent-section-12 ul .title-wrap .title-left {
+}
+
+#ent-main .ent-right .ent-section-12 ul .title-wrap .title-left .count {
+    width: 20px;
+    height: 15px;
+    padding: 2px 4px;
+    border: solid 1px #e2458f;
+
+    color: #e2458f;
+    font-size: 10px;
+
+    margin-right: 8px;
+}
+
+#ent-main .ent-right .ent-section-12 ul .title-wrap .title-left h3 {
+    color: #e2458f;
+    font-size: 12px;
+}
+
+#ent-main .ent-right .ent-section-12 ul .title-wrap .icon-arrow {
+    width: 8px;
+    height: 12px;
+    background-color: #e2458f;
+}
+
+#ent-main .ent-right .ent-section-12 ul .article-content {
+}
+
+#ent-main .ent-right .ent-section-12 ul .article-content .content-left {
+    width: 200px;
+}
+
+#ent-main .ent-right .ent-section-12 ul .article-content .content-left h4 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-top: 6px;
+}
+
+#ent-main .ent-right .ent-section-12 ul .article-content .content-left .source {
+    font-size: 11px;
+    color: #a6a6a6;
+}
+
+#ent-main .ent-right .ent-section-12 ul .article-content img {
+    width: 70px;
+    height: 70px;
+    border: solid 1px #000;
+}
+
+#ent-main .ent-right .ent-section-12 .bottom {
+    border-bottom: solid 1px #f2f2f2;
+    padding-bottom: 24px;
+}
+
+#ent-main .ent-right .ent-section-12 .bottom .btn {
+    width: 24px;
+    height: 24px;
+    border: solid 1px #f2f2f2;
+}
+
+#ent-main .ent-right .ent-section-12 .bottom .btn.btn-prev {
+    background-color: gray;
+    border-right: none;
+}
+
+#ent-main .ent-right .ent-section-12 .bottom .btn.btn-next {
+    background-color: yellow;
+}
+
+#ent-main .ent-right .ent-section-12 .bottom .more {
+    font-size: 12px;
+    color: #999;
+}
+
+/* ENT Section 13 */
+#ent-main .ent-right .ent-section-13 {
+    padding: 20px 0 2px;
+    border-bottom: solid 1px #e8e8e8;
+}
+
+#ent-main .ent-right .ent-section-13 .title-wrap {
+    margin-bottom: 12px;
+}
+
+#ent-main .ent-right .ent-section-13 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-right .ent-section-13 li {
+    width: 146px;
+    margin-bottom: 19px;
+}
+
+#ent-main .ent-right .ent-section-13 li img {
+    width: 100%;
+    height: 138px;
+    border: solid 1px #000;
+    margin-bottom: 9px;
+}
+
+#ent-main .ent-right .ent-section-13 li h4 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+
+    /* 
+    네이버 사이트의 경우는 어떤 요소엔 margin-top을 적용하고 어떤 요소엔 margin-bottom을 적용하고 중구난방..
+    가능하면 일관성있게 작성하는 것이 좋다.
+    */
+    margin-bottom: 5px;
+}
+
+#ent-main .ent-right .ent-section-13 li span {
+    font-size: 11px;
+    color: #898989;
+}
+
+/* ENT Seciton 14 */
+/* 스타일이 반복되는 요소는 하나의 클래스로 설정해서 사용하는 것이 유지보수에 좋다*/
+#ent-main .ent-right .ent-section-14 {
+    padding-top: 12px;
+}
+
+#ent-main .ent-right .ent-section-14 .title-wrap {
+    margin-bottom: 8px;
+}
+
+#ent-main .ent-right .ent-section-14 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-right .ent-section-14 .title-wrap .more {
+    font-size: 12px;
+    color: #999;
+}
+
+#ent-main .ent-right .ent-section-14 .heading {
+    margin-bottom: 8px;
+}
+
+#ent-main .ent-right .ent-section-14 .heading .heading-info {
+    width: 210px;
+}
+
+#ent-main .ent-right .ent-section-14 .heading h4 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+#ent-main .ent-right .ent-section-14 .heading .source {
+    font-size: 11px;
+    color: #999;
+}
+
+#ent-main .ent-right .ent-section-14 .heading img {
+    width: 70px;
+    height: 70px;
+    border: solid 1px #000;
+}
+
+#ent-main .ent-right .ent-section-14 ul {
+}
+
+#ent-main .ent-right .ent-section-14 ul li {
+    margin-bottom: 8px;
+}
+
+#ent-main .ent-right .ent-section-14 ul a {
+    display: block; /* a태그의 범위를 늘려주기 위함 */
+    width: 100%;
+    font-size: 12px;
+    color: #222;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#ent-main .ent-right .ent-section-14 ul a::before {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+
+    vertical-align: top;
+    background-color: silver;
+
+    margin: 5px 5px 0 0;
+}
+
+/* ENT Footer */
+#ent-footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+#ent-footer .ent-container {
+    width: 980px;
+    height: 100%;
+
+    padding: 48px 0 41px 0;
+    border-top: solid 1px #e8e8e8;
+}
+
+#ent-footer .ent-container ul {
+    margin-bottom: 9px;
+}
+
+#ent-footer .ent-container ul a::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background-color: #d7d7d7;
+
+    margin: 0 6px;
+
+    vertical-align: -1px;
+}
+
+#ent-footer .ent-container li:first-child a::before {
+    content: none;
+}
+
+#ent-footer .ent-container ul a.on {
+    font-weight: bold;
+}
+
+#ent-footer .ent-container .ent-footer-paragraph {
+    padding: 3px 0 15px 0;
+}
+
+/* 08-05 */
+/* NAVER GAME */
+#game-body {
+    background-color: #f8f9fd;
+}
+
+.game-container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.game-flex-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.game-flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.game-flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-shadow {
+    box-shadow: 0 2px 30px 0 rgb(0 0 0 / 6%);
+}
+
+/* 공통적인 요소들은 클래스화해라 */
+.game-p-30 {
+    padding: 30px;
+}
+
+.game-m-t-20 {
+    margin-top: 20px;
+}
+
+.font-17 {
+    font-size: 17px;
+}
+
+.font-19 {
+    font-size: 19px;
+}
+
+.font-400 {
+    font-weight: 400;
+}
+
+/* GAME Header */
+#game-header {
+    width: 100%;
+    background-color: #4e41db;
+}
+
+#game-header nav {
+    height: 60px;
+}
+
+/* GAME Header NAV Left */
+#game-header nav .left {
+}
+
+#game-header nav .left h1 {
+    font-size: 20px;
+}
+
+#game-header nav .left h1 a {
+    color: #fff;
+}
+
+#game-header nav .left ul {
+}
+
+#game-header nav .left ul li {
+}
+
+#game-header nav .left ul li a {
+    color: #9daeb6;
+    font-size: 18px;
+}
+
+#game-header nav .left ul li a::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    border-radius: 0.5px;
+    background-color: #9daeb6;
+
+    margin: 0 12px;
+}
+
+/* GAME Header NAV Right */
+#game-header nav .right {
+}
+
+#game-header nav .right .search-wrap {
+    /* border-radius 속성을 적용하려면 overflow 속성값으로 hidden을 적용해야 함 */
+    overflow: hidden;
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.28);
+}
+
+#game-header nav .right .search-wrap input {
+    width: calc(100% - 38px);
+    height: 38px;
+    background-color: transparent;
+    padding: 10px 12px 9px 14px;
+    border: none;
+
+    color: #fff;
+    font-size: 15px;
+}
+
+#game-header nav .right .search-wrap input:focus {
+    outline: none;
+}
+
+#game-header nav .right .search-wrap button {
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    border: none;
+}
+
+#game-header nav .right .ticket-wrap {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+#game-header nav .right .ticket-wrap .btn-ticket {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: solid 1px #fff;
+}
+
+#game-header nav .right .ticket-wrap .bubble-msg {
+    /* 
+    position이 absolute일 경우 margin: 0 auto;를 적용해 x축 중앙정렬을 하지 못함
+    */
+    position: absolute;
+    width: 165px;
+    background-color: #697183;
+    border-radius: 8px;
+
+    padding: 10px 12px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+
+    z-index: 100;
+}
+
+#game-header nav .right .btn-login {
+    width: 50px;
+    border: solid 1px hsla(0, 0%, 80%, 0.3);
+    border-radius: 8px;
+
+    padding: 7px 0 6px;
+    margin-left: 10px;
+
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+/* GAME Events Wrap */
+#game-header .game-events-wrap {
+    padding: 80px 0;
+}
+
+#game-header .game-events-wrap .event-wrap {
+    position: relative; /* 일종의 안전 장치 */
+    width: 407px;
+    height: 264px;
+    border-radius: 40px;
+
+    top: 0;
+    transition: top linear 0.45s;
+}
+
+#game-header .game-events-wrap .event-wrap:hover {
+    top: -20px;
+}
+
+#game-header .game-events-wrap .event-wrap.one {
+    background-color: rgb(112, 104, 236);
+}
+
+#game-header .game-events-wrap .event-wrap.two {
+    background-color: rgb(69, 39, 39);
+}
+
+#game-header .game-events-wrap .event-wrap.three {
+    background-color: rgb(112, 177, 181);
+}
+
+#game-header .game-events-wrap .event-wrap .event-title-wrap {
+    position: absolute;
+
+    left: 30px;
+    bottom: 30px;
+
+    color: #fff;
+}
+
+#game-header .game-events-wrap .event-wrap .event-title-wrap span {
+    display: inline-block;
+    border: solid 2px #fff;
+    border-radius: 10px;
+
+    padding: 4px 8px 2px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+#game-header .game-events-wrap .event-wrap .event-title-wrap h2 {
+    font-size: 20px;
+}
+
+/* GAME Main */
+/* GAME Main Left */
+#game-main .game-container {
+    align-items: stretch;
+}
+
+#game-main .left {
+    width: 900px;
+    /* height: 2000px; */
+    /* background-color: yellow; */
+    padding-bottom: 200px;
+}
+
+/* 08-06 */
+#game-main .left .left-banner {
+    overflow: hidden;
+    width: 900px;
+    height: 120px;
+    border-radius: 12px;
+
+    margin-bottom: 24px;
+}
+
+#game-main .left .left-banner a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#game-main .left .left-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+/* GAME Section Default */
+.game-section {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 2px 30px 0 rgb(0, 0, 0 / 6%);
+    border-radius: 12px;
+
+    padding: 27px 30px 40px;
+    margin-bottom: 40px;
+}
+
+.game-section .section-title-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-section .section-title-wrap h2 {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.game-section .section-middle-nav {
+}
+
+.game-section .section-middle-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.07);
+}
+
+.game-section .section-middle-nav li {
+}
+
+.game-section .section-middle-nav a {
+    display: block;
+    padding: 14px;
+    border-bottom: solid 3px transparent;
+    color: #777;
+}
+
+.game-section .section-middle-nav a.active {
+    border-bottom: solid 3px #7776ff;
+    font-weight: 700;
+    color: #7776ff;
+}
+
+.game-section .section-body-wrap {
+    margin-top: 18px;
+}
+
+.game-section .section-body-wrap .image-txt-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-section .section-body-wrap .image-txt {
+    width: 407.5px;
+}
+
+.game-section .section-body-wrap img {
+    width: 180px;
+    height: 100px;
+    border-radius: 8px;
+    border: solid 1px rgba(0, 0, 0, 0.06);
+
+    margin-right: 15px;
+}
+
+.game-section .section-body-wrap .txt {
+    width: 212px;
+}
+
+/* 
+li 태그 안에 있는 title요소와 source요소에도 적용하기 위함
+*/
+.game-section .section-body-wrap .title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+
+    margin-bottom: 3px;
+}
+
+.game-section .section-body-wrap .source {
+    font-size: 13px;
+    color: #999;
+}
+
+.game-section .btn-circle {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 30px 0 rgb(0, 0, 0 / 6%);
+
+    bottom: -27.5px;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.game-section .btn-circle.icon-arrow {
+    background-color: gray;
+}
+
+.game-section .btn-circle.icon-plus {
+    background-color: blue;
+}
+
+/* 
+game section 영역의 css 속성을 디폴트 값으로 설정하고 
+게임 섹션마다 id값을 부여해 커스텀한다.
+실무에서 많이 사용된다.
+*/
+/* GAME Section 1 */
+#game-section-1 .section-btn-wrap a {
+    font-size: 14px;
+    color: #9da5b6;
+    font-weight: 700;
+}
+
+#game-section-1 .section-btn-wrap a.active {
+    color: #7776ff;
+}
+
+#game-section-1 .section-btn-wrap a:last-child {
+    margin-left: 14px;
+}
+
+#game-section-1 ol {
+}
+
+#game-section-1 ol li {
+    padding: 10px 0;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.03);
+}
+
+#game-section-1 ol li a {
+}
+
+#game-section-1 ol li .game-thumbnail {
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+#game-section-1 ol li .txt-info {
+    width: 690px;
+    margin-right: 10px;
+}
+
+#game-section-1 ol li .txt-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+#game-section-1 ol li .txt-info .source-wrap {
+    font-size: 13px;
+    color: #858894;
+}
+
+#game-section-1 ol li .txt-info .source-wrap .game {
+    margin-right: 5px;
+}
+
+#game-section-1 ol li .txt-info .source-wrap .author {
+    margin-right: 5px;
+}
+
+#game-section-1 ol li .txt-info .source-wrap .level {
+    margin-right: 5px;
+}
+
+#game-section-1 ol li .txt-info .source-wrap .rank {
+}
+
+#game-section-1 ol li .blog-thumbnail {
+    border-radius: 8px;
+}
+
+/* 08-09 */
+/* GAME Section 2 */
+#game-section-2 {
+}
+
+#game-section-2 .section-title-wrap .more {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#game-section-2 .section-body-wrap {
+}
+
+#game-section-2 .section-body-wrap ul {
+    margin-top: 25px;
+}
+
+#game-section-2 .section-body-wrap li {
+    margin-bottom: 11px;
+}
+
+#game-section-2 .section-body-wrap li:last-child {
+    margin-bottom: 0;
+}
+
+#game-section-2 .section-body-wrap a {
+}
+
+#game-section-2 .section-body-wrap ul .title {
+    width: 776px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* GAME Section 3 */
+#game-section-3 .section-body-wrap .image-txt-wrap .category {
+    display: block; /* span태그는 상하배치 작업이 안되기 때문에 block 요소로 변경해줌 */
+    font-size: 13px;
+    color: #7776ff;
+    margin-bottom: 3px;
+}
+
+/* GAME Section 4 */
+#game-section-4 ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#game-section-4 li {
+}
+
+#game-section-4 a {
+    display: block;
+}
+
+#game-section-4 .image-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 263px;
+    height: 148px;
+    border-radius: 8px;
+}
+
+#game-section-4 .image-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#game-section-4 .image-wrap .icon-play {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: grey;
+
+    left: 10px;
+    bottom: 10px;
+}
+
+#game-section-4 .image-wrap .time {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 6px;
+    border-radius: 6px;
+
+    color: #fff;
+    font-size: 14px;
+
+    right: 10px;
+    bottom: 10px;
+}
+
+/* 
+위에서 설정한 클래스로 인해 width값이 li요소를 벗어남
+그래서 다시 재설정해줌
+*/
+#game-section-4 .section-body-wrap .image-txt {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#game-section-4 .image-txt h3 {
+    font-size: 15px;
+}
+
+#game-section-4 .image-txt .source,
+#game-section-4 .image-txt .count {
+    font-size: 13px;
+    color: #999;
+}
+
+/* GAME Seciton 5 */
+#game-section-5 .section-title-wrap .info {
+    font-size: 13px;
+    color: #999;
+}
+
+#game-section-5 .section-body-wrap .image-wrap {
+    position: relative;
+    width: 190px;
+    height: 120px;
+}
+
+#game-section-5 .section-body-wrap .image-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin-right: 0;
+}
+
+#game-section-5 .section-body-wrap .image-wrap .badge {
+    position: absolute;
+    display: inline-block;
+
+    color: #fff;
+    background-color: #4e41db;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 8px;
+
+    top: -5px;
+    left: -5px;
+}
+
+#game-section-5 .section-body-wrap .image-wrap .badge.open {
+    background-color: red;
+}
+
+#game-section-5 .section-body-wrap .txt-wrap {
+    margin-top: 12px;
+}
+
+#game-section-5 .section-body-wrap .txt-wrap h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#game-section-5 .section-body-wrap .txt-wrap p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#game-section-5 .section-body-wrap .txt-wrap span {
+    font-size: 13px;
+    color: grey;
+}
+
+/* GAME Section 6 */
+#game-section-6 .section-body-wrap img {
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+}
+
+#game-section-6 .section-body-wrap .category {
+    font-size: 15px;
+}
+
+#game-section-6 .section-body-wrap .txt {
+    width: 300px;
+}
+
+#game-section-6 .section-body-wrap .title {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 13px;
+    color: #666;
+}
+
+/* 
+이전에 작업한 내용을 바탕으로 캐스캐이딩을 이용해서 레이아웃 작업을 빠르게 할 수 있다.
+*/
+
+/* GAME Main Right */
+#game-main .right {
+    width: 358px;
+    /* height: 2000px; */
+    /* background-color: gray; */
+}
+
+/* 08-10 */
+.right-section {
+    background-color: #fff;
+    box-shadow: 0 2px 30px 0 rgb(0 0 0 / 6%);
+    border-radius: 12px;
+
+    padding: 30px;
+    margin-bottom: 24px;
+}
+
+/* Visitor Section */
+.right-section .title-wrap {
+}
+
+.right-section .title-wrap h2 {
+    font-size: 17px;
+    font-weight: 400;
+    color: #444;
+}
+
+.right-section .right-section-body {
+    margin-top: 20px;
+}
+
+#visitor-section .text-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#visitor-section .text-wrap p {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #9da5b6;
+    text-align: center;
+}
+
+#visitor-section .text-wrap .input-wrap {
+    overflow: hidden;
+    position: relative;
+    width: 250px;
+    height: 44px;
+    background-color: #f5f6fa;
+    border-radius: 12px;
+
+    margin-top: 18px;
+}
+
+#visitor-section .text-wrap .input-wrap input {
+    width: calc(100% - 44px);
+    height: 100%;
+    background-color: transparent;
+
+    padding: 10px 16px;
+    border: none;
+
+    font-size: 15px;
+}
+
+#visitor-section .text-wrap .input-wrap input:focus {
+    outline: none;
+}
+
+#visitor-section .text-wrap .input-wrap button {
+    width: 44px;
+    height: 100%;
+    background-color: gray;
+}
+
+/* Popular Section */
+.rank-section .right-section-body {
+}
+
+.rank-section .right-section-body li {
+    margin-bottom: 16px;
+}
+
+.rank-section .right-section-body li::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: gray;
+}
+
+.rank-section .right-section-body li:last-child {
+    margin-bottom: 0;
+}
+
+.rank-section .right-section-body li .count-wrap {
+    position: relative;
+    width: 25px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.rank-section .right-section-body .count-wrap .count {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.rank-section .right-section-body .count-wrap .count.red {
+    color: #ff4c51;
+}
+
+.rank-section .right-section-body .count-wrap .up-and-down-wrap {
+    position: absolute;
+    left: 6px;
+    bottom: -13px;
+}
+
+.rank-section .right-section-body .count-wrap .up-and-down-wrap .equal {
+    display: inline-block;
+    width: 5px;
+    height: 3px;
+    background-color: gray;
+    margin-left: 3px;
+}
+
+.rank-section .right-section-body .count-wrap .up-and-down-wrap .up::before {
+    background-color: red;
+}
+
+.rank-section .right-section-body .count-wrap .up-and-down-wrap .up {
+    color: red;
+}
+
+.rank-section .right-section-body .count-wrap .up-and-down-wrap span {
+    font-size: 10px;
+}
+
+.rank-section .right-section-body .count-wrap .up-and-down-wrap span::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 7px;
+    height: 3px;
+    background-color: red;
+    top: -2px;
+    margin-right: 1px;
+}
+
+.rank-section .right-section-body .count-wrap .up-and-down-wrap .down {
+    color: blue;
+}
+
+.rank-section .right-section-body .count-wrap .up-and-down-wrap .down::before {
+    background-color: blue;
+}
+
+.rank-section .right-section-body .image-wrap {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    margin-right: 5px;
+}
+
+.rank-section .right-section-body .image-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.rank-section .right-section-body .image-wrap .chk {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-color: gray;
+    border-radius: 50%;
+
+    top: -2px;
+    right: -2px;
+}
+
+.rank-section .right-section-body .txt-wrap {
+}
+
+.rank-section .right-section-body .txt-wrap h3 {
+    width: 182px;
+    font-size: 15px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    margin-right: 10px;
+}
+
+.rank-section .right-section-body .txt-wrap .genre {
+    font-size: 13px;
+    color: #999;
+}
+
+.rank-section .right-section-body .time {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #999;
+}
+
+/* News Section */
+#news-section .right-section-body ul {
+}
+
+#news-section .right-section-body ul li {
+    margin-bottom: 5px;
+}
+
+#news-section .right-section-body ul li :last-child {
+    margin-bottom: 0;
+}
+
+#news-section .right-section-body ul a {
+    display: block;
+}
+
+#news-section .right-section-body ul a::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: gray;
+
+    top: -5px;
+    margin-right: 5px;
+}
+
+/* Week Section */
+#week-section li {
+    margin-bottom: 16px;
+}
+
+#week-section li:last-child {
+    margin-bottom: 0;
+}
+
+#week-section img {
+    width: 128px;
+    height: 72px;
+    border-radius: 8px;
+
+    margin-right: 10px;
+}
+
+#week-section .txt-wrap h3 {
+    font-size: 15px;
+}
+
+#week-section .txt-wrap span {
+    font-size: 13px;
+    color: #999;
+}
+
+/* Game Footer Section */
+#game-footer-section {
+}
+
+#game-footer-section a {
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+}
+
+#game-footer-section a::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 1px 10px 0;
+    background-color: #ddd;
+    vertical-align: top;
+}
+
+/* 08-11 */
+/* eSport Page */
+.esport-flex-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.esport-flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.esport-flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.esport-flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.esport-container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/* eSport Header */
+#esport-header {
+    position: fixed;
+    width: 100%;
+    background-color: #151618;
+    border-bottom: solid 1px gray;
+
+    /* 브라우저의 왼쪽 상단을 기준으로 딱 붙게 된다. */
+    left: 0;
+    top: 0;
+
+    z-index: 99999;
+}
+
+#esport-header #esport-nav a {
+    color: #fff;
+}
+
+#esport-header #esport-nav .nav-wrap {
+    height: 60px;
+}
+
+#esport-header #esport-nav .left h1 {
+    font-size: 20px;
+}
+
+#esport-header #esport-nav .left li::before {
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 14px;
+    background-color: rgba(160, 165, 182, 0.3);
+    margin: 0 12px;
+}
+
+#esport-header #esport-nav .left a {
+    color: gray;
+}
+
+#esport-header #esport-nav .center li {
+    margin-right: 24px;
+}
+
+#esport-header #esport-nav .center li:last-child {
+    margin-right: 0;
+}
+
+#esport-header #esport-nav .center li a {
+    display: inline-block;
+    width: 30px;
+    height: 60px;
+
+    line-height: 60px; /* y축 중앙 정렬 */
+    border-bottom: solid 5px transparent;
+
+    color: gray;
+    font-size: 15px; /* 폰트의 종류에 따라 레이아웃이 어그러지는 경우가 있어 폰트 크기 조정함 */
+    text-align: center;
+}
+
+#esport-header #esport-nav .center li a:hover {
+    color: darkgrey;
+}
+
+#esport-header #esport-nav .center li a.active {
+    color: #fff;
+    border-bottom: solid 5px #fff;
+}
+
+#esport-header #esport-nav .right a {
+    border: solid 1px hsla(0, 0%, 80%, 0.3);
+    border-radius: 9px;
+
+    padding: 4px 8px;
+
+    font-size: 12px;
+}
+
+#esport-header #esport-nav .right a:last-child {
+    margin-left: 10px;
+}
+
+/* eSpoart Main */
+/* 
+    만약 padding 속성을 추가하지 않는다면, fixed navbar는 다른 컨텐츠를 잡아 먹을 것이다.
+*/
+#esport-main {
+    padding-top: 61px;
+}
+
+/* eSport Main Top */
+#esport-main-top {
+    background-color: #151618;
+}
+
+/* Timeline Wrap */
+#esport-main-top .timeline-wrap {
+    padding: 20px 0;
+}
+
+#esport-main-top .timeline-wrap ul {
+}
+
+#esport-main-top .timeline-wrap li {
+    width: 16.6%; /* 원래 자바스크립트에 작성되었지만 일단 width 값으로 적용함 */
+    background-color: #272b31;
+    border-radius: 10px;
+    margin-right: 1px;
+}
+
+#esport-main-top .timeline-wrap li:last-child {
+    margin-right: 0;
+}
+
+#esport-main-top .timeline-wrap li a {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    color: #fff;
+}
+
+#esport-main-top .timeline-wrap li a .date {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#esport-main-top .timeline-wrap li a h2 {
+    font-size: 13px;
+    margin-top: 6px;
+    color: #a0a5b6;
+}
+
+#esport-main-top .timeline-wrap li a .status-wrap {
+    margin-top: 35px;
+}
+
+#esport-main-top .timeline-wrap li a .status-wrap .live {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#esport-main-top .timeline-wrap li a .status-wrap .status {
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+}
+
+/* Live Wrap */
+#esport-main-top .live-wrap {
+    padding-bottom: 60px;
+}
+
+#esport-main-top .live-wrap h2 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#esport-main-top .live-wrap h2 .count {
+    color: #8a7cff;
+}
+
+#esport-main-top .live-wrap ul li {
+    overflow: hidden;
+    width: 625px;
+    background-color: #1f2227;
+    border-radius: 10px;
+}
+
+#esport-main-top .live-wrap a {
+    /* display: block; */
+    /* width: 100%; */
+    /* height: 100%; */
+    align-items: flex-start;
+}
+
+#esport-main-top .live-wrap li img {
+    width: 442px;
+    height: 250px;
+}
+
+#esport-main-top .live-wrap li .txt-wrap {
+    width: 183px;
+    padding: 17px 20px 22px;
+}
+
+#esport-main-top .live-wrap li .txt-wrap span {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 3px 7px;
+}
+
+#esport-main-top .live-wrap li .txt-wrap h3 {
+    font-size: 15px;
+    color: #fff;
+    margin-top: 8px;
+}
+
+/* 08-12 */
+#esport-main .content-wrap {
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+/* eSport Main Left */
+#esport-main .left {
+    float: left;
+    width: 900px;
+    height: 2000px;
+    /* background-color: yellow; */
+}
+
+/* eSport Main Article */
+#esport-main-article {
+    overflow: hidden;
+    width: 100%;
+    height: 468px;
+    background-color: gray;
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+}
+
+#esport-main-article .article {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+
+#esport-main-article .article.full {
+    height: 100%;
+}
+
+#esport-main-article .article img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#esport-main-article .article .txt-wrap {
+    position: absolute;
+    width: 100%;
+    padding: 0 24px 20px;
+
+    left: 0;
+    bottom: 0;
+
+    color: white;
+}
+
+#esport-main-article .article .txt-wrap h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+#esport-main-article .article .txt-wrap p {
+    margin-top: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+#esport-main-article .article .txt-wrap .source {
+    display: block;
+    margin-top: 10px;
+
+    font-size: 13px;
+    color: hsla(0, 0, 100%, 0.7);
+}
+
+/* eSport Section */
+.esport-section {
+    border-top: solid 1px gray;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.esport-section .title-wrap {
+    padding: 15px 0;
+}
+
+.esport-section .title-wrap h2 {
+    font-size: 18px;
+}
+
+/* eSport Replay */
+#esport-replay .game-menu {
+    margin-bottom: 24px;
+}
+
+#esport-replay .game-menu ul {
+}
+
+#esport-replay .game-menu ul li {
+    margin-right: 20px;
+}
+
+#esport-replay .game-menu ul li:last-child {
+    margin-right: 0;
+}
+
+#esport-replay .game-menu ul li a {
+    display: block;
+    width: 60px;
+
+    text-align: center;
+}
+
+#esport-replay .game-menu ul li a.active i {
+    background-color: purple;
+}
+
+#esport-replay .game-menu ul li a.active span {
+    color: purple;
+}
+
+#esport-replay .game-menu ul li i {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: gray;
+    border-radius: 50%;
+
+    margin-bottom: 6px;
+}
+
+#esport-replay .game-menu ul li span {
+    font-size: 13px;
+}
+
+#esport-replay .play-lists {
+}
+
+#esport-replay .play-lists li {
+    width: 285px;
+}
+
+#esport-replay .play-lists li:nth-child(-n + 3) {
+    margin-bottom: 24px;
+}
+
+#esport-replay .play-lists li a {
+    display: block;
+}
+
+#esport-replay .play-lists li .image-wrap {
+    position: relative;
+    width: 100%;
+    height: 160px;
+
+    margin-bottom: 11px;
+}
+
+#esport-replay .play-lists li .image-wrap img {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+#esport-replay .play-lists li .image-wrap .status-wrap {
+    position: absolute;
+    width: 100%;
+
+    left: 0;
+    bottom: 0;
+
+    padding: 10px;
+}
+
+#esport-replay .play-lists li .image-wrap .status-wrap i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+}
+
+#esport-replay .play-lists li .image-wrap .status-wrap .time {
+    background-color: rgba(0, 0, 0, 0.07);
+    padding: 3px 5px;
+    border-radius: 3px;
+
+    font-size: 11px;
+    color: white;
+}
+
+#esport-replay .play-lists li .image-wrap .status-wrap i {
+}
+
+#esport-replay .play-lists li h3 {
+    font-size: 15px;
+}
+
+/* eSport News */
+#esport-news {
+}
+
+#esport-news .article-wrap {
+    align-items: flex-start;
+}
+
+#esport-news .article-wrap .left-lists {
+    width: 472px;
+}
+
+#esport-news .article-wrap .left-lists li {
+    width: 226px;
+}
+
+#esport-news .article-wrap .left-lists li a {
+    display: block;
+}
+
+#esport-news .article-wrap .left-lists img {
+    width: 100%;
+    height: 132px;
+    margin-bottom: 9px;
+}
+
+#esport-news .article-wrap .left-lists h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#esport-news .article-wrap .left-lists p {
+    font-size: 14px;
+    color: #777;
+}
+
+#esport-news .article-wrap .right-lists {
+    width: 400px;
+}
+
+#esport-news .article-wrap .right-lists li {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#esport-news .article-wrap .right-lists li::before {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    width: 4px;
+    height: 4px;
+    background-color: gray;
+    border-radius: 50%;
+
+    content: '';
+}
+
+#esport-news .article-wrap .right-lists li a {
+    display: block;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+/* eSport Expert */
+#esport-expert {
+    margin-top: 24px;
+}
+
+#esport-expert .news-lists {
+}
+
+#esport-expert .news-lists li {
+    width: 450px;
+}
+
+#esport-expert .news-lists li:nth-child(-n + 2) {
+    margin-bottom: 15px;
+}
+
+#esport-expert .news-lists li a {
+}
+
+#esport-expert .news-lists li img {
+    width: 153px;
+    height: 86px;
+    margin-right: 15px;
+}
+
+#esport-expert .news-lists .txt-wrap {
+    width: 268px;
+}
+
+#esport-expert .news-lists .txt-wrap h3 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#esport-expert .news-lists .txt-wrap p {
+    font-size: 14px;
+    color: #777;
+    line-height: 19px;
+    margin-top: 4px;
+
+    /* 두 줄이상으로 넘어가면 말줄임 표시를 하겠다 */
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 38px;
+    -webkit-line-clamp: 2; /* 두 줄로 설정 */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+#esport-expert .news-lists .txt-wrap .source {
+    font-size: 13px;
+    color: #777;
+}
+
+/* eSport Main Right */
+#esport-main .right {
+    float: right;
+    width: 357px;
+    height: 2000px;
+    /* background-color: gray; */
+}
+
+/* eSport News View */
+#esport-news-view {
+    padding: 20px;
+    border: solid 1px gray;
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+}
+
+#esport-news-view h2 {
+    font-size: 18px;
+}
+
+#esport-news-view ol {
+    margin-top: 20px;
+}
+
+#esport-news-view li {
+    margin-bottom: 8px;
+}
+
+#esport-news-view li:last-child {
+    margin-bottom: 0;
+}
+
+#esport-news-view li a {
+}
+
+#esport-news-view .image-wrap {
+    overflow: hidden;
+    position: relative;
+    width: 84px;
+    height: 48px;
+    border: solid 1px rgba(0, 0, 0, 0.04);
+    border-radius: 4px; /* inherit - 부모 요소의 boder 값으로 받아내겠다 */
+}
+
+#esport-news-view .image-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#esport-news-view .image-wrap .rank {
+    position: absolute;
+    background-color: #4e41db;
+    border-bottom-right-radius: 4px;
+
+    padding: 4px 10px;
+
+    top: 0;
+    left: 0;
+
+    font-size: 13px;
+    color: #fff;
+    font-weight: 800;
+}
+
+#esport-news-view li h3 {
+    display: -webkit-box;
+    overflow: hidden;
+
+    width: 218px;
+    max-height: 38px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+
+    font-size: 14px;
+    line-height: 19px;
+}
+
+/* eSport Schedule */
+#esport-schedule {
+}
+
+#esport-schedule h2 {
+    font-size: 18px;
+}
+
+#esport-schedule .schedule-wrap {
+    margin-top: 15px;
+    border: solid 1px gray;
+    border-radius: 10px;
+}
+
+#esport-schedule .schedule-wrap .schedule-header {
+    padding: 10px 15px;
+    border-bottom: solid 1px gray;
+}
+
+#esport-schedule .schedule-wrap .schedule-header .arrow {
+    width: 20px;
+    height: 20px;
+}
+
+#esport-schedule .schedule-wrap .schedule-header .arrow.arrow-left {
+    background-color: yellow;
+}
+
+#esport-schedule .schedule-wrap .schedule-header .arrow.arrow-right {
+    background-color: greenyellow;
+}
+
+#esport-schedule .schedule-wrap .schedule-header span {
+    position: relative;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    top: 3px;
+}
+
+#esport-schedule .schedule-body {
+    padding: 17px 0;
+}
+
+#esport-schedule .schedule-body li {
+}
+
+#esport-schedule .schedule-body li:first-child::after {
+    content: '';
+    display: block;
+    width: calc(100%-40px);
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+
+    margin: 17px auto;
+}
+
+#esport-schedule .schedule-body li h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#esport-schedule .schedule-body li .status-wrap {
+}
+
+#esport-schedule .schedule-body li .status-wrap:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#esport-schedule .schedule-body li .status-wrap .status {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: red;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 3px;
+
+    margin-right: 4.5px;
+
+    padding: 2px 4px;
+}
+
+#esport-schedule .schedule-body li .status-wrap .time {
+    position: relative;
+
+    top: 1px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Audio Page */
+.audio-container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.audio-flex-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audio-flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.audio-flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.audio-flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Audio header */
+#audio-header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #efeff4;
+
+    left: 0;
+    top: 0;
+
+    z-index: 99999;
+}
+
+/* Audio Nav Left */
+#audio-header .audio-nav-left {
+    width: 660px;
+}
+
+#audio-header .audio-nav-left .audio-logo {
+    font-size: 25px;
+}
+
+#audio-header .audio-nav-left .audio-logo a {
+}
+
+#audio-header .audio-nav-left ul {
+    padding-top: 10px;
+}
+
+#audio-header .audio-nav-left li {
+}
+
+#audio-header .audio-nav-left li a {
+    display: block; /* 상하 패딩 값을 정상적으로 인식하게 된다. */
+    font-size: 17px;
+    font-weight: 700;
+    padding: 12px 13px 17px 12px;
+}
+
+#audio-header .audio-nav-left li a.active {
+    font-weight: 700;
+}
+
+#audio-header .audio-nav-left li a span {
+    position: relative;
+    display: inline-block;
+    height: 21px;
+}
+
+#audio-header .audio-nav-left li a.active span::after {
+    display: block;
+    position: absolute;
+    content: '';
+    border-bottom: solid 3px #222;
+    border-radius: 1.5px;
+
+    z-index: 1;
+
+    /* 포지션관련 속성을 통해 꼭짓점을 찍어 공간을 만들 수 있다 */
+    left: -4.5px;
+    right: -5.5px;
+    bottom: -17px;
+}
+
+/* Audio Nav Right */
+#audio-header .audio-nav-right {
+    width: 330px;
+}
+
+#audio-header .audio-nav-right .search-wrap {
+    width: 180px;
+    height: 40px;
+    background-color: white;
+    border: solid 2px rgba(0, 86, 201, 0.2);
+    border-radius: 4px;
+}
+
+#audio-header .audio-nav-right .search-wrap .icon-search {
+    width: 40px;
+    height: 100%;
+    background-color: yellow;
+}
+
+#audio-header .audio-nav-right .search-wrap input {
+    width: calc(100% - 40px);
+    height: 100%;
+
+    padding: 8px 15px;
+    font-size: 14px;
+
+    outline: none;
+    border: none;
+}
+
+#audio-header .audio-nav-right .search-wrap input:focus {
+    outline: none;
+}
+
+#audio-header .audio-nav-right .profile-wrap {
+}
+
+#audio-header .audio-nav-right .profile-wrap .profile-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+#audio-header .audio-nav-right .profile-wrap .btn-login {
+    font-size: 15px;
+    padding-left: 8px;
+}
