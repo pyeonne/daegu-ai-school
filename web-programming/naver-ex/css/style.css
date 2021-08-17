@@ -5099,6 +5099,68 @@ game section 영역의 css 속성을 디폴트 값으로 설정하고
     color: #959595;
 }
 
+/* Audio Book */
+#audio-book {
+}
+
+#audio-book .audio-body {
+}
+
+#audio-book .audio-body ul {
+    align-items: flex-start;
+}
+
+#audio-book .audio-body li {
+    width: 120px;
+}
+
+#audio-book .audio-body .image-wrap {
+    position: relative;
+    width: 100%;
+}
+
+#audio-book .audio-body .image-wrap img {
+    width: 100%;
+}
+
+#audio-book .audio-body .image-wrap .time {
+    position: absolute;
+
+    padding: 2px 5px 0;
+    background-color: rgba(17, 17, 17, 0.75);
+
+    font-size: 11px;
+    color: #fff;
+
+    right: 5px;
+    bottom: 5px;
+}
+
+#audio-book .audio-body li h3 {
+    font-size: 13px;
+    margin-top: 11px;
+}
+
+#audio-book .audio-body li .author-1 {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+
+    color: #959595;
+}
+
+#audio-book .audio-body li .author-2 {
+    display: block;
+    font-size: 12px;
+}
+
+#audio-book .audio-body li .price {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
 /* Audio Main Right */
 #audio-main .audio-main-right {
     /* float: right; */
