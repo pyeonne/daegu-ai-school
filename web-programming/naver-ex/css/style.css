@@ -4831,3 +4831,12 @@ game section 영역의 css 속성을 디폴트 값으로 설정하고
     font-size: 15px;
     padding-left: 8px;
 }
+
+/* 08-17 */
+/* Audio Main */
+#audio-main {
+    width: 100%;
+    background-color: #f5f8fa;
+
+    padding-top: 61px;
+}
