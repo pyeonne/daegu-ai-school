@@ -5161,6 +5161,40 @@ game section 영역의 css 속성을 디폴트 값으로 설정하고
     font-weight: 500;
 }
 
+/* Audio Channel */
+#audio-channel {
+}
+
+#audio-channel .audio-body {
+}
+
+#audio-channel .audio-body ul {
+    align-items: flex-start;
+}
+
+#audio-channel .audio-body li {
+    width: 120px;
+    height: 120px;
+}
+
+#audio-channel .audio-body li img {
+    width: 120px;
+    height: 120px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#audio-channel .audio-body li h3 {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+#audio-channel .audio-body li .author {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #959595;
+}
+
 /* Audio Main Right */
 #audio-main .audio-main-right {
     /* float: right; */
