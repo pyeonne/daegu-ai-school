@@ -4861,7 +4861,24 @@ game section 영역의 css 속성을 디폴트 값으로 설정하고
 }
 
 .audio-section .audio-body {
+    position: relative;
     padding-top: 19px;
+}
+
+.audio-section .audio-body .btn {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.audio-section .audio-body .btn-left {
+    left: -17px;
+}
+
+.audio-section .audio-body .btn-right {
+    right: -17px;
 }
 
 /* Audio Main Left */
@@ -4881,21 +4898,7 @@ game section 영역의 css 속성을 디폴트 값으로 설정하고
 }
 
 #audio-today .audio-slide-wrap .btn {
-    position: absolute;
     top: 83px;
-
-    width: 35px;
-    height: 35px;
-    background-color: yellow;
-    border-radius: 50%;
-}
-
-#audio-today .audio-slide-wrap .btn-left {
-    left: -17px;
-}
-
-#audio-today .audio-slide-wrap .btn-right {
-    right: -17px;
 }
 
 #audio-today .audio-slide img {
@@ -4910,6 +4913,42 @@ game section 영역의 css 속성을 디폴트 값으로 설정하고
 
 #audio-today .audio-slide .txt-wrap p {
     margin-top: 12px;
+}
+
+/* Audio Original */
+#audio-original {
+}
+
+#audio-original .audio-body {
+    position: relative;
+}
+
+#audio-original .audio-body ul {
+    align-items: flex-start;
+}
+
+#audio-original .audio-body ul li {
+    width: 120px;
+}
+
+#audio-original .audio-body ul li img {
+    border-radius: 10px;
+}
+
+#audio-original .audio-body ul li h3 {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+#audio-original .audio-body .author {
+    font-size: 12px;
+    margin-top: 2px;
+
+    color: #959595;
+}
+
+#audio-original .audio-body .btn-right {
+    top: 60px;
 }
 
 /* Audio Main Right */
