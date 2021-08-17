@@ -4838,5 +4838,82 @@ game section 영역의 css 속성을 디폴트 값으로 설정하고
     width: 100%;
     background-color: #f5f8fa;
 
-    padding-top: 61px;
+    padding-top: 61px; /* header와 겹쳐지는 부분을 제거 */
+}
+
+#audio-main .audio-container {
+    /* overflow: hidden; main left와 right 영역이 부모 영역의 높이 값에 영향을 주기 위함 */
+    align-items: flex-start;
+}
+
+/* 각 섹션별 공통 디자인 */
+.audio-section {
+    padding: 32px 0;
+}
+
+.audio-section .audio-header {
+}
+
+.audio-section .audio-header h2 {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.8px; /* 자간 간격 조절 */
+}
+
+.audio-section .audio-body {
+    padding-top: 19px;
+}
+
+/* Audio Main Left */
+#audio-main .audio-main-left {
+    /* float: left; */
+    width: 660px;
+}
+
+/* Audio Today */
+#audio-today .audio-slide {
+    align-items: flex-start;
+}
+
+#audio-today .audio-slide-wrap {
+    position: relative;
+    width: 100%;
+}
+
+#audio-today .audio-slide-wrap .btn {
+    position: absolute;
+    top: 83px;
+
+    width: 35px;
+    height: 35px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+#audio-today .audio-slide-wrap .btn-left {
+    left: -17px;
+}
+
+#audio-today .audio-slide-wrap .btn-right {
+    right: -17px;
+}
+
+#audio-today .audio-slide img {
+    width: 380px;
+    height: 198px;
+}
+
+#audio-today .audio-slide .txt-wrap h3 {
+    font-size: 18px;
+    padding-top: 2px;
+}
+
+#audio-today .audio-slide .txt-wrap p {
+    margin-top: 12px;
+}
+
+/* Audio Main Right */
+#audio-main .audio-main-right {
+    /* float: right; */
+    width: 330px;
 }
