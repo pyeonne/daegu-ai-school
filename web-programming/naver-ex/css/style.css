@@ -4839,6 +4839,7 @@ game section 영역의 css 속성을 디폴트 값으로 설정하고
     background-color: #f5f8fa;
 
     padding-top: 61px; /* header와 겹쳐지는 부분을 제거 */
+    padding-bottom: 121px;
 }
 
 #audio-main .audio-container {
@@ -5362,4 +5363,71 @@ game section 영역의 css 속성을 디폴트 값으로 설정하고
 
 #audio-create .audio-body li .list-bg-2 {
     background-color: purple;
+}
+
+/* Audio Footer */
+#audio-footer {
+    background-color: #eaecef;
+    padding: 48px 0 164px;
+}
+
+#audio-footer h1 {
+    font-size: 25px;
+}
+
+#audio-footer h1 a {
+    color: #959595;
+}
+
+#audio-footer .copyright-wrap {
+    margin-top: 37px;
+}
+
+#audio-footer .copyright-wrap p {
+    letter-spacing: -0.5px;
+    font-size: 13px;
+    line-height: 19px;
+
+    color: #959595;
+}
+
+#audio-footer .footer-nav {
+    margin-top: 47px;
+}
+
+#audio-footer .footer-nav ul {
+    overflow: hidden;
+}
+
+#audio-footer .footer-nav li {
+    float: left;
+}
+
+#audio-footer .footer-nav li a {
+    font-size: 13px;
+    color: #959595;
+}
+
+#audio-footer .footer-nav li a::after {
+    display: inline-block;
+    content: '';
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #959595;
+
+    /* margin: 4px 7px; */
+    vertical-align: top;
+    margin: 9px 7px 0;
+}
+
+#audio-footer .footer-nav li:last-child a::after {
+    content: none;
+}
+
+#audio-footer .footer-copyright-link {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #959595;
 }
