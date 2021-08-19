@@ -83,9 +83,10 @@ a {
     align-items: center;
 }
 
-.container {
+.main-container {
     width: 100%;
     min-width: 1340px; /* 특정 지점에서 더이상 줄어들지 않게 하기 위함 */
+    /* padding-top: 50px; */
 }
 
 /* Top Nav */
@@ -96,6 +97,7 @@ a {
     height: 50%;
     background-color: #0e0e10;
     padding: 0 15px;
+    min-width: 1340px;
 }
 
 /* Nav Left */
@@ -225,3 +227,149 @@ a {
 }
 
 /* Left Area */
+.left-area {
+    position: fixed;
+    width: 240px;
+    background-color: #202024;
+    top: 50px; /* top nav 높이만큼 내림 */
+    bottom: 0; /* height 100% */
+    left: 0;
+    overflow-y: auto; /* 스크롤 */
+}
+
+.left-area .channel-wrap .channel-header {
+    padding: 10px;
+}
+
+.left-area .channel-wrap .channel-header h3 {
+    font-size: 15px;
+}
+
+.left-area .channel-wrap .channel-header .icon-arrow {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+}
+
+.left-area .channel-wrap .channel-body {
+}
+
+.left-area .channel-wrap .channel-body ul {
+}
+
+.left-area .channel-wrap .channel-body li {
+}
+
+.left-area .channel-wrap .channel-body a {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 10px;
+    align-items: flex-start;
+}
+
+.left-area .channel-wrap .channel-body img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.left-area .channel-wrap .channel-body .txt-wrap {
+    width: 110px;
+    margin-left: 10px;
+}
+
+.left-area .channel-wrap .channel-body .txt-wrap h4 {
+    font-size: 13px;
+}
+
+.left-area .channel-wrap .channel-body .txt-wrap .source {
+    font-size: 12px;
+    color: gray;
+}
+
+.left-area .channel-wrap .channel-body .count {
+    display: block;
+    width: 50px;
+    font-size: 12px;
+}
+
+.left-area .channel-wrap .channel-body .count::before {
+    position: relative;
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+
+    margin-right: 5px;
+    top: 1px;
+}
+
+/* Join Wrap */
+.left-area .join-wrap {
+    margin: 10px;
+}
+
+.left-area .join-wrap .txt-wrap {
+    padding: 20px;
+    background-color: #18181a;
+}
+
+.left-area .join-wrap .txt-wrap .h2 {
+    font-size: 24px;
+}
+
+.left-area .join-wrap .txt-wrap h2 span {
+}
+
+.left-area .join-wrap .txt-wrap p {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.left-area .join-wrap .txt-wrap .btn-purple {
+    margin-top: 10px;
+    width: 53px;
+    height: 30px;
+    border-radius: 5px;
+
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.left-area .info-wrap {
+    font-size: 12px;
+    margin: 0 10px 10px 10px;
+}
+
+.left-area .info-wrap p {
+    color: gray;
+}
+
+.left-area .info-wrap ul {
+    margin-top: 10px;
+}
+
+.left-area .info-wrap li {
+}
+
+.left-area .info-wrap li a {
+    color: gray;
+}
+
+.left-area .info-wrap li a::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 10px;
+    background-color: gray;
+
+    margin: 0 5px;
+}
+
+.left-area .info-wrap li:last-child a::after {
+    content: none;
+}
