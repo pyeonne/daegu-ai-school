@@ -84,9 +84,10 @@ a {
 }
 
 .main-container {
+    position: relative;
     width: 100%;
-    min-width: 1340px; /* 특정 지점에서 더이상 줄어들지 않게 하기 위함 */
-    /* padding-top: 50px; */
+    height: 100%;
+    min-width: 1340px; /*특정 지점에서 더이상 줄어들지 않게 하기 위함*/
 }
 
 /* Top Nav */
@@ -372,4 +373,184 @@ a {
 
 .left-area .info-wrap li:last-child a::after {
     content: none;
+}
+
+/* 08-23 */
+/* 
+왼쪽 영역에 스크롤에 생겨도 레이아웃이 틀어지지 않게 하려면
+다른 사람이 만들어 놓은 jQuery Scrollbar를 이용하는 것도 좋은 방법이다.
+https://gromo.github.io/jquery.scrollbar/demo/basic.html 
+
+내부 콘텐츠 영역의 상단 부분은 자바스크립트와 제이쿼리를 사용해야 구현 가능하다. (지금은 스킵)
+그리고 오른쪽의 스크롤바는 내부 콘텐츠 영역에 한해서 생기도록 할 것이다.
+
+
+내부 콘텐츠 영역의 요소들이 왼쪽 사이드바와 상단 네비바에 의해 겹쳐지는 것을 볼 수 있다.
+이를 해결하기 위해 콘텐츠 영역에 position: absolute;를 적용했고, 
+position 관련 속성을 이용해 영역을 잡아주었다.
+*/
+
+.content {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 240px;
+
+    overflow-y: auto; /* 콘텐츠 영역 내부에서만 스크롤바가 생기도록 설정함 */
+}
+
+.content h1 {
+    font-size: 40px;
+}
+
+#content-banner {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: center / cover no-repeat url('../img/notebook.jpg');
+    /*
+    background는 단축 속성.
+    background-size: cover;는 가로 세로 비율은 그대로 유지하되,
+    브라우저 크기를 줄이거나 늘릴 때마다 이미지의 크기를 자동적으로 조절해준다.
+    이미지를 세로 또는 가로방향으로 잘라내어 빈 공간이 생기지 않도록 설정한다. 
+    보통 이미지 내부에 있는 주요 콘텐츠들이 잘 보이게끔 하기위해
+    콘텐츠들이 가운데로 모이게 작업한다.
+    */
+}
+
+#content-banner .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#content-banner .layer .txt-wrap {
+    position: absolute;
+    top: 170px;
+    right: 200px;
+}
+
+/*
+.main-container에 min-width 값을 부여했음에도 불구하고 적용이 되고 있지 않는다.
+그 이유는 자식 요소들이 모두 3차원이기 때문에 
+부모 요소가 자식 요소의 width와 height 값을 제대로 인식하지 못하고 있기 때문이다.
+그래서 main-container에 position: relative;를 적용하고
+브라우저의 높이 값을 인식하도록 height: 100%를 적용했다.
+*/
+
+/*
+트위치 웹사이트는 브라우저의 크기에 따라 요소들의 크기도 변하지만
+지금 실습에서는 고정 값으로 설정할 것이다. 
+.content-container 내부에 있는 콘텐츠들은 항상 중앙에 배치되도록 설정했다.
+*/
+
+.content .content-container {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* Tag default */
+.content-container .tag-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content-container .tag-wrap .tag {
+    font-size: 12px;
+    color: #fff;
+    background: gray;
+    border-radius: 8px;
+
+    padding: 2px 4px 0;
+    margin-right: 5px;
+}
+
+.content-container .tag-wrap .tag:last-child {
+    margin-right: 0;
+}
+
+.content-container .txt-wrap {
+}
+
+.content-container .txt-wrap h3 {
+    font-size: 16px;
+}
+
+/* Vedio Section */
+.video-section {
+}
+
+.video-section .title-wrap {
+    padding-bottom: 10px;
+}
+
+.video-section .title-wrap h2 {
+    font-size: 20px;
+}
+
+.video-section .video-wrap {
+}
+
+.video-section .video-wrap ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.video-section .video-wrap li {
+    width: 330px;
+}
+
+.video-section .video-wrap a {
+}
+
+.video-section .video-wrap .image-wrap {
+    position: relative;
+    width: 333px;
+    height: 186px;
+}
+
+.video-section .video-wrap .image-wrap img {
+    width: 100%;
+    height: 100%;
+}
+
+.video-section .video-wrap .image-wrap .mark {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-radius: 5px;
+    background: red;
+
+    padding: 2px 4px 0;
+
+    font-size: 14px;
+}
+
+.video-section .video-wrap .video-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.video-section .video-wrap .video-bottom .thumbnail {
+    width: 40px;
+    height: 40px;
+}
+
+.video-section .video-wrap .video-bottom .txt-wrap {
+    width: calc(100% - 50px);
+}
+
+.video-section .video-wrap .video-bottom .txt-wrap .source,
+.video-section .video-wrap .video-bottom .txt-wrap .game {
+    font-size: 14px;
+    color: gray;
 }
