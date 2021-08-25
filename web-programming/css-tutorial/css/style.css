@@ -1,0 +1,56 @@
+/*
+    reset.css에서 설정한 스타일 속성이 먼저 적용이 된 다음에
+    style.css에서 설정한 스타일 속성이 적용되는 것.
+
+    캐스캐이딩의 특징으로 나중에 설정한 스타일 속성이 적용된다.
+    link 태그로 연결한 파일의 경우도 동일하게 적용된다.
+
+h1 {
+    color: blue;
+}
+
+h1 {
+    color: red;
+} 
+*/
+
+/* CSS 변수 */
+/* 
+    일괄적으로 CSS 디자인 수정 작업을 할 때 편리하다. 
+    변수명이 직관적이어서 이해하기 쉽다.
+    IE에서 사용하기엔 제약이 크다.
+*/
+:root {
+    --black: #18181a;
+    --brand-color: #9147ff;
+    --font-size-16: 40px;
+}
+
+h1 {
+    background-color: var(--black);
+    font-size: var(--font-size-16);
+    color: var(--brand-color);
+}
+
+h2 {
+    color: var(--brand-color);
+}
+
+/* 
+    CSS 변수가 적용되는 범위를 CSS 선택자를 사용해서 정의할 수 있다.
+    모든 영역에 발휘되게 하려면 :root 안에 설정해야 한다.
+*/
+#intro {
+    --font-color: blue;
+    --font-size: 50px;
+}
+
+#intro p {
+    font-size: var(--font-size);
+    color: var(--font-color);
+}
+
+#footer p {
+    font-size: var(--font-size);
+    color: var(--font-color);
+}
