@@ -1,0 +1,513 @@
+/*
+0값만 적어놓는 것은 모든 면을 0으로 주겠다는 뜻
+*/
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.box-model {
+
+    공간의 크기를 유지하면서 paddig을 적용하고 싶을 때
+
+    box-sizing: border-box;
+
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: solid 10px red;
+*/
+    /*
+    margin과 padding은 선택된 영역이 주체가 되서 움직인 것이 아니라
+    빈 공백에 의해서 타의적으로 움직인다.
+    padding을 사용하면 선택된 공간의 넓이가 달라질 수 있다. (width + padding = 공간의 넓이)
+    */
+
+    /*
+    margin, padding은 한 줄로 간략하게 작성 가능하다. (top right bottom left)
+    CSS 코드 분량이 길어질수록 브라우저의 로딩 속도가 느려지므로 간결하게 쓰는 것이 좋다.
+    */
+    /*
+    margin: 100px 0 0 100px;
+    padding: 100px 0 0 100px;
+    */
+
+
+    /*
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+    */
+
+/*
+} */
+
+/*
+형제 지간에 발생하는 margin 병합 현상
+margin-one의 margin-bottom과 margin-two의 margin-top의 공간을 서로 공유하고 있다.
+*/
+/*
+.margin-one {
+    width: 100%;
+    height: 100px;
+    background-color: yellow;
+
+    margin-bottom: 100px;
+}
+
+.margin-two {
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+
+    margin-top: 150px;
+} */
+
+/*
+부모 자식간에 발생하는 margin 병합 현상
+해결법 반드시 숙지해야한다.
+*/
+.margin-parent {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+}
+
+.margin-child {
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+
+    margin-top: 100px;
+}
+
+/*
+Inline 요소는 공간도 만들지 못하며 상하배치작업도 하지 못한다.
+dispaly 속성을 사용하여 선택한 태그의 진영을 변경할 수 있다.
+display 속성값을 inline-block으로 주면 inline 속성도 가지면서 block 속성을 가지게 할 수 있다.
+*/
+/*
+h1 {
+    display: inline-block;
+
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+
+    margin-top: 100px;
+}
+
+span {
+    display: block;
+
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+
+    margin-top: 100px;
+} */
+
+.inline-block {
+    display: inline-block;
+
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+/*
+vertical-align 속성은 inline 요소에서만 사용가능하다.
+img 태그는 inline-block 속성의 성격을 가지고 있다.
+*/
+.inlne, .inline-block, img {
+    vertical-align: middle;
+}
+
+/*
+position: static의 특징
+자식이 margin-top 속성을 사용하면 마진 병합 현상이 발생한다.
+top, right, bottom, left 속성을 사용할 수 없다.
+부모의 높이값이 없을 때 자식의 높이값이 영향을 줄 수 있다.
+
+모든 html 태그는 기본값으로 positon: static 속성을 지니고 있다.
+*/
+.static-parent {
+    width: 300px;
+    /* height: 300px; */
+    background-color: yellow;
+}
+
+.static-child {
+    position: static;
+
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+
+    /* margin-top: 100px; */
+    /* top: 100px; */
+}
+
+.box1 {
+    width: 300px;
+    height: 200px;
+    background-color: gray;
+}
+
+.fixed-parent {
+    width: 300px;
+    /* height: 300px; */
+    background-color: yellow;
+}
+
+/*
+position: fixed - 3차원 영역에 포함하는 속성값
+스크롤을 내려도 화면에 고정된다 .
+margin-top을부모 자식 지간에 마진 병합 현상이 일어나지 않는다.
+top, right, bottom, left를 사용할 수 있지만 브라우저 왼쪽 상단을 기준으로 이동한다.
+부모의 높이값이 없어도 자식의 높이값이 영향을 주지 못한다.
+*/
+.fixed-child {
+    position: fixed;
+
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+    /* margin-top: 100px; */
+    /* top: 100px; */
+}
+
+.box2 {
+    width: 300px;
+    height: 2000px;
+    background-color: green;
+}
+
+.box1 {
+    width: 300px;
+    height: 200px;
+    background-color: gray;
+}
+
+.relative-parent {
+    width: 300px;
+    /* height: 300px; */
+    background-color: yellow;
+}
+
+/*
+position: relative - 2차원, 3차원의 특징을 모두 가지고 있다.
+margin-top을 사용시 부모 자식간에 마진 병합 현상이 일어난다.
+top, right, bottom, left를 사용할 수 있고 원래 있던 위치에서 이동한다.
+자식의 높이값이 부모에게 영향을 준다.
+
+top, right, bottom, left 속성은 margin, paddig 속성과 달리 자신이 주체가 되서 움직인다.
+*/
+.relative-child {
+    position: relative;
+
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+    /* margin-top: 100px; */
+    /* top: 100px; */
+}
+
+.box1 {
+    width: 300px;
+    height: 200px;
+    background-color: gray;
+}
+
+.absolute-parent {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+}
+/*
+position:absolute - 3차원의 특징. fixed와 동일
+부모 자식간에 마진 병합 현상이 일어나지 않는다.
+top, right, bottom, left를 사용할 수 있지만 브라우저 왼쪽 상단을 기준으로 이동한다.
+하지만, 부모의 position 속성이 3차원을 띄게 되면 부모를 기준으로 이동한다.
+자식의 높이값이 부모에게 영향을 줄
+ 수 없다.
+
+ fixed를 제외한 position의 27가지의 경우의 수를 완전히 습득하면 레이아웃을 마음대로 만질 수 있다.
+ 꼭 숙지해두길! + 형제관계의  position 상관관계도 숙지해두면 좋다. fixed를 제외한 9가지
+*/
+.absolute-child {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+    /* margin-top: 100px; */
+    top: 100px;
+}
+
+/*
+담주 내용을 미리 해버렸군 ㅇ.ㅇ 
+position의 3차원 속성을 사용하면 레이어가 겹치는 현상이 발생한다.
+z-index를 사용하면 z축을 자유롭게 조절할 수 있다.
+z축은 3차원 특징을 지니고 있는 속성값에서만 사용가능하다. 디폴트값 0
+
+첫번째 형제 요소에 position의 순수 3차원 속성값을 주면 레이어가 겹치게 된다.
+즉, 첫번째 형제 요소의 position 속성값이 2차원이냐 3차원이냐에 따라 레이어가 겹칠지 안겹칠지가 결정된다.
+레이어 겹침 현상을 방지하기위해 큰 섹션을 만들 때는 거의 대부분 2차원을 사용한다.
+그 안에 작은 섹선은 2차원이나 3차원을 사용한다. 디자인에 따라 달라짐.
+*/
+.z-one {
+    /* position: absolute; */
+
+    width: 200px;
+    height: 400px;
+    background-color: yellow;
+
+    /* z-index: 10; */
+}
+
+.z-two {
+    position: absolute;
+
+    width: 200px;
+    height: 300px;
+    background-color: blue;
+
+    /* z-index: 20; */
+}
+
+
+.left-1 {
+    float: left;
+
+    width: 100px;
+    height: 150px;
+    background-color: blue;
+}
+
+.right-1 {
+    float: right;
+
+    width: 100px;
+    height: 150px;
+    background-color: green;
+}
+
+/* 
+float 은 같은 선상에 레이어 배치작업을 하고 싶을 때
+clear 는 같은 선상에 블록을 위치하는 기능을 끄고 싶을 때
+float 속성을 사용한 레이어 다음에 사용하면 됨
+
+<float 사용시 주의점>
+1. float을 사용하는 부모태그가 가변값이면 레이어가 틀어질 수 있다.
+고정값을 가지고 있는 부모태그 안에서 사용해야한다.
+영역의 width값을 가변값으로 주면 굳이 부모태그가 고정값일 필요가 없다. (극히 드문 경우)
+부모태그의 width값보다 더 높은 값을 주면 레이어가 틀어진다.
+
+2. 자식이 3차원이면 부모의 높이값이 없을때 영향을 줄 수 있지만, float을 사용한 자식은 부모에게 영향을 주지 않는다.
+
+3. 순수 3차원인 positon 속성은 float과 사용할 수 없다.
+*/
+/* header {
+    width: 100%;
+    height: 100px;
+    background-color: yellow;
+}
+
+.left {
+    float: left;
+
+    width: 100px;
+    height: 200px;
+    background-color: pink;
+}
+
+.center {
+    float: left;
+
+    width: 500px;
+    height: 200px;
+    background-color: blue;
+}
+
+.right {
+    position: absolute;
+    float: right;
+
+    width: 300px;
+    height: 200px;
+    background-color: green;
+}
+
+footer {
+    clear: both;
+
+    width: 100%;
+    height: 100px;
+    background-color: black;
+} 
+
+section {
+    width: 1400px;
+    height: 200px;
+    background-color: orange;
+} */
+
+/* 
+실무팁
+1. cloarfix를 이용해 이전까지는 float 기능이 사용되었구나
+그 이후부터는 float 기능이 꺼졌구나라고 유추를 할 수 있다.
+float이 어디서 시작되고 끝이 났는지 확인할 수 있다.
+html 코드를 파악하는 용이하다.
+
+2. overflow: hidden과 float을 결합해서 사용하면
+자식의 높이값을 부모에게 영향을 줄 수 있도록 만들 수 있다.
+*/
+/* .left-2 {
+    float: left;
+
+    width: 100px;
+    height: 150px;
+    background-color: yellow;
+}
+
+.right-2 {
+    float: right;
+
+    width: 100px;
+    height: 150px;
+    background-color: blue;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.clearfix {
+    clear: both;
+}
+
+section {
+    overflow: hidden;
+    width: 800px;
+    background-color: orange;
+} */
+
+/*
+ overflow: heddin 은 영역 내에서 벗어난 글자를 숨겨준다.
+*/
+/* .over-box {
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+} */
+
+/* 
+두 개의 클래스를 사용해서 하나의 클래스는 공간의 크기를 담당하고
+나머지 클래스는 서로 다른 부가적인 CSS 속성을 적용하고자 할때 활용할 수 있다.
+
+flex
+float의 발전된 기능. float보다 더 수월하게 레이아웃 배치작업을 할 수 있다.
+부모에게 flex를 적용하면 자식들이 자동으로 x축 기준으로 정렬된다.
+
+정렬 기준을 바꾸고 싶으면 flex-direction 속성을 사용하면 된다.
+row는 x축(기본값), colum은 y축
+
+flex-wrap: nowrap 부모의 영역에 맞춰 자동으로 리사이즈 해주는 기능
+flex-wrap: wrap 부모의 영역에서 벗어나면 자동 줄바꿈
+
+flex-flow 는 flex-diriction과 flex-wrap을 동시에 설정할 수 있다.
+
+justify-content를 정렬하고 싶을 때 사용한다.
+flex-start 왼쪽 정렬(기본값)
+flex-end 오른쪽 정렬
+center 가운데 정렬
+space-between 각각의 레이어끼리 동일한 공간을 가지며 정렬
+space-around 각각의 레이어 좌우에 동일한 공백을 가지며 정렬. 안쪽과 바깥쪽의 공백의 크기는 다르다.
+
+align-items y축 기준으로 레이어를 정렬하고 싶을 때
+flex-start 가장 윗쪽에 배치하고 싶을 때
+flex-end 가장 아래쪽
+center 가운데
+baseline 각각의 레이어들의 밑에 라인을 기준으로 정렬
+
+https://flexbox.help/ 기능을 시각적으로 확인 가능
+*/
+.container {
+    display: flex;
+   
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 1000px;
+    height: 500px;
+    border: solid 10px red;
+}
+
+.item {
+    width: 200px;
+}
+
+.one {
+    height: 100px;
+    background-color: yellow;
+}
+
+.two {
+    height: 200px;
+    background-color: blue;
+}
+
+.three {
+    /* width: 900px; */
+    height: 300px;
+    background-color: orange;
+}
+
+/*
+레이어를 가운데에 배치하고 싶을 때
+1. margin: 0 auto 블록요소에 사용하면 됨
+2. positon: relative를 사용하고 left: 50%과 margin-left: 요소의 넓이 절반값을 주면 가운데에 배치가능
+단점은 요소의 넓이가 바뀌면 margin-left의 값도 수정이 필요하다.
+
+https://css-tricks.com/centering-in-css/ 중앙정렬 참고 사이트
+*/
+.center-1 {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+
+    margin: 0 auto;
+}
+
+.center-2 {
+    position: relative;
+
+    width: 400px;
+    height: 300px;
+    background-color: blue;
+
+    left: 50%;
+    margin-left: -200px;
+}

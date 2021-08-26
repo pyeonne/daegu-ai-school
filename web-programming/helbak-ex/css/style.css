@@ -1,0 +1,329 @@
+/* 
+* 모든 html의 태그에 마진과 패딩값을 0을 적용하겠다.
+*/
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+/* 디폴트값으로 넣어주면 좋음. 웹브라우저의 기본 넓이 높이 확인 가능 */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    /* 가로스크롤 방지 */
+    overflow-x: hidden;
+
+    font-family: sans-serif;
+    color: #585858;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    /* 100 ~ 900. 100단위로 올라가며 숫자가 높아질수록 폰트 굵기가 굵어진다.*/
+    font-weight: 400;
+}
+
+/* li 태그의 동그라미는 왼쪽으로 밀어서 사라진것 뿐이라
+직접 list-style 속성을 사용해서 제거함 */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 이미지 미세한 공간 제거 */
+img {
+    vertical-align: middle;
+}
+
+span {
+    display: block;
+}
+
+
+/* 덴마크 쇼핑몰은 모바일 버전을 먼저 작성하고
+미디어쿼리내에 PC 버전을 작성했다. */
+#header h1 {
+    background-color: yellow;
+}
+
+#header h1 .logo {
+    position: relative;
+    /* a태그는 inline요소기 때문에 block적용 */
+    display: block;
+
+    width: 100%;
+    height: 65px;
+    /* background-color: yellow; */
+}
+
+#header .logo img {
+    position: absolute;
+
+    top: 0;
+    margin-top: 23px;
+
+    left: 50%;
+    margin-left: -93px;
+}
+
+/* 자식의 높이값을 부모가 인식할 수 있다.
+header 태그가 ul태그의 높이값도 같이 인식할 수 있게 되었다. */
+#header .buttons ul {
+    overflow: hidden;
+}
+
+#header .buttons li {
+    position: relative;
+    float: left;
+
+    width: 33.33%;
+    height: 65px;
+}
+
+#header .buttons .menu-button {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#header .buttons li:nth-child(1) .menu-button {
+    background-color: blue;
+}
+
+#header .buttons li:nth-child(2) .menu-button {
+    background-color: pink;
+}
+
+#header .buttons li:nth-child(3) .menu-button {
+    background-color: green;
+}
+
+#header .buttons li .menu-button img {
+    position: relative;
+    height: 20px;
+
+    /* y축 중앙정렬 공식 
+    실무에서 자주 사용하므로 꼭 기억*/
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* PC */
+/* 1em = 16px; */
+@media (min-width: 47em) {
+    #header {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+
+        top: 0;
+        left: 0;
+
+        z-index: 99999;
+    }
+
+    #header h1 {
+        width: 50%;
+    }
+
+    /* 클릭의 범위를 logo주변만 되도록 줄임 */
+    #header h1 .logo {
+        width: 280px;
+        height: 80px;
+    }
+
+    #header .logo img {
+        margin-top: 30px;
+    }
+
+    #header .buttons {
+        position: absolute;
+        width: 50%;
+
+        /* 좌우배치 */
+        left: 50%;
+        top: 0;
+    }
+
+    #header .buttons li {
+        height: 80px;
+    }
+}
+
+
+.main-content .product-group-link {
+    position: relative;
+    display: block;
+    /* float: left; */
+
+    width: 100%;
+    /* 이미지의 비율을 근사치로 넣어준 것 */
+    height: 56.25%;
+    border: solid 10px red;
+
+    overflow: hidden;
+}
+
+/* 이미지의 크기를 link크기로 재조정 */
+.main-content .product-group-link img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-content .product-group-link .link-text {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    color: black;
+    font-size: 25px;
+}
+
+/* 헤더와 메인태그 사이에 공백을 만들어 주자 */
+@media (min-width: 47em) {
+    .main-content {
+        padding-top: 80px;
+    }
+}
+
+@media (min-width: 60em) {
+    /* 높이값을 잡아주자 */
+    .main-content {
+        overflow: hidden;
+    }
+
+    .main-content .product-group-link {
+        /* 좌우배치 */
+        float: left;
+        width: 50%;
+        height: 28.125%;
+    }
+}
+
+
+#footer {
+    position: relative;
+    background-color: yellow;
+
+    /* footer 아래의 버튼의 크기를 미리 만들어 둔 것 */
+    padding-bottom: 66px;
+}
+
+#footer .left-nav {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#footer .left-nav li {
+    padding: 5px 0;
+}
+
+#footer .right-methods {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#footer .right-methods li {
+    display: inline-block;
+    padding: 7px 4px;
+}
+
+#footer .right-methods .payment-icon {
+    display: inline-block;
+
+    width: 30px;
+    height: 20px;
+}
+
+#footer .right-methods .payment-icon.one {
+    background-color: black;
+}
+
+#footer .right-methods .payment-icon.two {
+    background-color: red;
+}
+
+#footer .right-methods .payment-icon.three {
+    background-color: pink;
+}
+
+#footer .right-methods .payment-icon.four {
+    background-color: blue;
+}
+
+#footer .right-methods .payment-icon.five {
+    background-color: gray;
+}
+
+#footer .to-top-button {
+    position: absolute;
+    display: block;
+
+    width: 66px;
+    height: 66px;
+    background-color: green;
+
+    bottom: 0;
+    left: 50%;
+    margin-left: -33px;
+}
+
+@media (min-width: 60em) {
+    #footer {
+        height: 66px;
+    }
+
+    #footer .left-nav {
+        float: left;
+
+        width: 50%;
+        background-color: yellow;
+        text-align: left;
+
+        padding-top: 32px;
+        padding-left: 40px;
+    }
+
+    #footer .right-methods {
+        float: right;
+
+        width: 50%;
+        background-color: yellowgreen;
+
+        margin: 0;
+        padding-top: 32px;
+        padding-right: 40px;
+
+        text-align: right;
+    }
+
+    #footer ul, #footer li, #footer h3 {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #footer .left-nav a {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
+    #footer .right-methods li {
+        padding: 0 4px;
+    }
+
+    #footer h3 {
+        padding-right: 10px;
+    }
+
+}

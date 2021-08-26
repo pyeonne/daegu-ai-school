@@ -1,0 +1,185 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    margin: 0;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu ul {
+    /* 
+    자식 요소가 3차원인 경우 부모 요소에게 영향을 줄 수 없다.
+    그래서 overflow: hidden; 속성을 적용함  
+    ul 태그의 높이값은 li 태그의 높이값 + border 위아래 높이값  
+    */
+    overflow: hidden;
+    background-color: pink;
+}
+
+.menu li {
+    /* 요소들 사이에 공백이 생겨서 사용할 수 없다. */
+    /* display: inline-block; */
+    float: left;
+
+    width: 100px;
+    /* height: 50px; */
+    background-color: yellow;
+
+    /* 
+    요소 사이에 있는 border는 2px로 보이는 문제가 있다.
+    이를 해결하기 위해선 border 속성을 더 세밀하게 지정해야 한다. 
+    top, bottom, left 를 각각 지정해주면 마지막 요소의 오른쪽이 남는데
+    이를 해결하기 위해선 last-child라는 가상자를 사용해야 한다.
+    */
+     /* border: solid 1px red; */
+
+     border-top: solid 1px red;
+     border-bottom: solid 1px red;
+     border-left: solid 1px red;
+
+    /* text-align: center; */
+
+    /* 
+    <text를 y축 중앙정렬하는 방법>?
+    1. 버튼의 높이값이 있는 경우 line-height에 값은 값을 주어 중앙정렬한다.
+    폰트에 따라 미묘하게 달라지기 때문에 눈대중으로 맞춰야하는 경우가 있다.
+    2. 버튼의 높이값이 없는 경우 padding-top, padding-bottom 에 동일한 값을 주어 중앙정렬한다.
+    */
+    /* line-height: 50px; */
+
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+
+}
+
+.menu li:last-child {
+    border-right: solid 1px red;
+}
+
+/* 
+요소에 커서를 올렸을 때 텍스트에만 한정되게  손가락 모양으로 바뀌는 것이 아니라
+요소 전체를 올렸을 때 바뀌게 하려면  a태그의 영역을 넓혀야 한다.
+*/
+.menu li a {
+    /* a태그 요소를 블록으로 바꾸면  a태그의 크기 바뀐다*/
+    display: block; 
+
+    /* 아까 li에 적용했던 css 속성이 적용된다 */
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+/* 마우스를 가져갔을때 색상이 변하게 하라 */
+.menu li a:hover {
+    color: blue;
+}
+
+/*
+margin-bottom 속성을 통해 list 요소사이에 공백 만듦 
+*/
+.kakao-lists li {
+    margin-bottom: 20px;
+}
+
+/* 
+padding-left 속성을 통해 이미지 왼쪽에 공백 만듦
+*/
+.kakao-lists li a {
+    display: block;
+    padding-left: 25px;
+}
+
+/* 중요! vertical-align: middle 속성을 통해 X축 중양정렬함 */
+.kakao-lists li img,
+.kakao-lists li .kakao-info {
+    vertical-align: middle;
+}
+
+/* 
+img  태그는 inline-block 성격을 가지고 있음 
+margin-right에 값을 주어 이미지 오른쪽에 공간 만듦
+*/
+
+.kakao-lists li img {
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+/* div 태그는 block 특징을 가지고 있는데 display 속성을 이용해 inline-block 성격으로 바꿈 */
+.kakao-lists li .kakao-info {
+    display: inline-block;
+}
+
+/*
+margin값 초기화해줌 
+vertical-align: middle;에 의해서 x축을 기준으로 가운데 정렬되었다.
+*/
+.kakao-lists li .kakao-info h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.kakao-lists li .kakao-info span {
+    font-size: 14px;
+    color: #c8c8c8;
+}
+
+
+/*
+웹 사이트 레이아웃을 자유롭게 정렬할 수 있는지를 주요 포인트로 볼 것! 
+*/
+.living-lists {
+    width: 750px;
+    background-color: orange;
+}
+
+.living-lists .image-link,
+.living-lists .info-link {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.living-lists .image-link {
+    margin-right: 21px;
+}
+
+.living-lists .info-link {
+    width: 512px;
+}
+
+.title-wrap {
+    border-top: solid 2px #000000;
+    border-bottom: solid 1px #000000;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+.title-wrap h3 {
+    margin-bottom: 20px;
+}
+
+https://flexbox.help/ 사이트에서 버튼클릭만으로 간편하게 레이아웃 작업할 수 있음
+원하는 레이아웃형태로 만든 뒤 복붙
+https://ko.learnlayout.com/ css 주요속성 리마인드 할수 있는 사이트
+.title-wrap .bth-wrap {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}

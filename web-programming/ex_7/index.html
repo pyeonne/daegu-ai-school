@@ -1,0 +1,155 @@
+<!-- 
+1. 적응형 px VS 반응형 %
+요즘은 두가지 형태를 섞어서 만든다.
+
+2. 네이버 사이트의 경우 pc버전 사이트와 모바일 버전 사이트(m.nver.com)가 따로 있다.
+이는 pc버전 html 파일과 모바일 버전 html 파일을 따로 만들어 둔  것인데,
+PC버전 레이아웃과 모바일 버전 레이아웃이 180도 다른 경우에
+모바일 버전 사이트를 별도로 제작하는 경우가 많다. 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+
+    <style media="(min-width: 300px) and (max-width:700px)">
+        body {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- 
+    <h1 class="pc">PC Hello World</h1>
+    <h1 class="mobile">Mobile Hello World</h1> -->
+
+
+    <!-- 
+    웹사이트 최초 제작시 모바일 버전에 맞춰 제작을 하는 것이 좋다.
+    그다음 태블릿, pc버전으로 확장해가는 것이 효율적이다.
+    코드 분량이 많이 줄어들게 된다.
+    ex) https://www.helbak.com/
+    미디어쿼리를 저 순서대로 작성해보자
+     -->
+     <!-- 
+        <h1>미디어쿼리 응용</h1> -->
+
+    <!-- 지금까지 배운 내용으로 실습을 해보자~ -->
+    <!-- 실습1
+    PC버전에서는 x축, 모바일버전에서는 y축으로 정렬되도록 미디어쿼리를 사용하여 만들어 봄 */ -->
+    <!-- <ul class="media-menu">
+        <li><a href="#">menu 1</a></li>
+        <li><a href="#">menu 2</a></li>
+        <li><a href="#">menu 3</a></li>
+    </ul>     -->
+
+
+    <!-- 
+        실습2
+        HELBAK 상단바 만들기
+     -->
+     <!-- 3차원 -->
+    <!-- <header class="intro"> 
+        <h1></h1>
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <!-- 
+        main 태그는 익스플로러에서 지원하지 않기 때문에
+        role 속성을 사용해서 속성값으로 main이라고 따로 넣어줘야 됨
+        전에 설명했다는데 기억이 안나누..
+     -->
+     <!-- 2차원 -->
+     <!-- 
+         첫째 형제 요소가 3차원이면 다음에 오는 형제요소가 뒷쪽으로 간다
+        즉, 레이어가 겹쳐지는 현상이 나타나는 것 
+        
+        콘텐츠가 보이게 하려면..
+        둘째 요소 padding-top 속성의 속성값으로 첫째 요소의 높이값을 준다.
+        그럼 둘째 요소의 콘텐츠가 내려와 겹쳐져 보이지 않는 콘텐츠가 보이게 된다.
+        하지만, 사실상 여전히 겹쳐져 있음
+    -->
+    <!-- 
+    <main role="main">
+        <h1>ㅇ.ㅇ Hello World Hello World Hello World Hello World  Hello World
+            Hello World Hello World Hello WorldHello WorldHello World
+            Hello WorldHello WorldHello WorldHello WorldHello World
+        </h1>
+        <h1>Hello World Hello World Hello World Hello World  Hello World
+            Hello World Hello World Hello WorldHello WorldHello World
+            Hello WorldHello WorldHello WorldHello WorldHello World
+        </h1>
+        <h1>Hello World Hello World Hello World Hello World  Hello World
+            Hello World Hello World Hello WorldHello WorldHello World
+            Hello WorldHello WorldHello WorldHello WorldHello World
+        </h1>
+        <h1>Hello World Hello World Hello World Hello World  Hello World
+            Hello World Hello World Hello WorldHello WorldHello World
+            Hello WorldHello WorldHello WorldHello WorldHello World
+        </h1>
+        <h1>Hello World Hello World Hello World Hello World  Hello World
+            Hello World Hello World Hello WorldHello WorldHello World
+            Hello WorldHello WorldHello WorldHello WorldHello World
+        </h1>
+    </main> -->
+
+
+    <!-- 실습3 - start bootstrap 페이지 만들기 -->
+    <!-- <div class="container">
+        <div class="column">
+            <img src="https://via.placeholder.com/250x150">
+            <div class="image-info">
+                <h2>Title</h2>
+            </div>
+        </div>
+        <div class="column">
+            <img src="https://via.placeholder.com/250x150">
+            <div class="image-info">
+                <h2>Title</h2>
+            </div>
+        </div>
+        <div class="column">
+            <img src="https://via.placeholder.com/250x150">
+            <div class="image-info">
+                <h2>Title</h2>
+            </div>
+        </div>
+        <div class="column">
+            <img src="https://via.placeholder.com/250x150">
+            <div class="image-info">
+                <h2>Title</h2>
+            </div>
+        </div>
+        <div class="column">
+            <img src="https://via.placeholder.com/250x150">
+            <div class="image-info">
+                <h2>Title</h2>
+            </div>
+        </div>
+        <div class="column">
+            <img src="https://via.placeholder.com/250x150">
+            <div class="image-info">
+                <h2>Title</h2>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    
+</body>
+</html>

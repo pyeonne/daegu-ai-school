@@ -1,0 +1,204 @@
+<!-- index.html 파일 안에서
+     HTML5라고하는 최신 HTML 문법을 사용하고
+	 과거에 사용되었던 HTML 문법은 사용할 수 없다 -->
+<!DOCTYPE html>
+
+<!-- 태그명 - HTML과 관련된 문법을 삽입하겠다
+     HTML 문법들이 들어가는 공간 -->
+<!-- 태그는 <열린태그>
+	            <열린태그></닫힌태그> -> 컨텐츠
+		   </닫힌태그>
+-->
+<html>
+
+<!-- 웹사이트의 써머리 정보 -->
+<head>
+
+	<!-- 웹사이트 기본 코드
+		 한글이 깨지는 경우가 있다
+	     <열린태그 속성 = "속성값"
+	     meat태그는 닫힌 태그가 없다 -->
+	<meta charset="utf-8">
+
+	<!-- 구글검색엔진에 노출되기 위한 코드 - 낚시성 글들로 인해 요즘은 메타정보를 통해 노출시켜주지 않고 
+	     얼마나 웹표준에 맞게 작성되었는지 보고 노출시켜준다
+		 description 웹사이트대한 간단한 한줄 요약 정보
+		 keywords 웹사이트에 관련된 간단한 단어 정보들 ex. 블로그글의 태그
+		 author 웹사이트를 만든 사람 이름
+	-->
+
+	<meta name="description" content="Web Tutorial">
+	<meta name="keywords" content="html, css, tutorial, web">
+	<meta name="author" content="Hana Jeong">
+
+	<!-- title: 상단 탭의 타이틀 정보 변경 -->
+	<title>HTML, CSS Tutorial</title>
+
+	<!-- link: 상단 탭의 파비콘 변경 
+         default는 지구본 이미지
+         닫힌태그가 없다
+	-->
+	<link rel="shortcut icon" type="image/icon" sizes="32x32" 
+		  href="favicon.ico">
+
+	<!--
+	<style>
+		p span {
+			color: red;
+			font-size: 20px;
+			background-color: pink;
+		}
+
+		mark {
+			background-color: gray;
+		}
+	</style>
+	-->
+
+</head>
+
+<!-- 실제로 보여지는 웹사이트의 정보 -->
+<body>
+
+	<!-- a: 다른 페이지로 이동하게 해주는 태그 -->
+	<!-- target의 속성값
+	     _blank: 새 탭에서 링크 열기 
+	     _self(기본값): 현재 탭에서 링크 열기 -->
+	<!--
+
+	<a href="http://www.naver.com/" target="_blank">네이버</a>
+
+	-->
+
+	<!-- img: 이미지를 삽입해주는 태그 -->
+	<!-- alt: 이미지 대신 표시하는 정보 -->
+	<!--
+
+	<img src="apple.png" alt="사과 이미지" width="150px" height="80px">
+	<img src="https://www.pikpng.com/pngl/m/                                                   194-1945877_paula-red-apple-apple-paula-red-apple-png.png" alt="사과 이미지">
+
+	-->
+
+	<!--
+
+	<h1>Title</h1>
+	<h2>Title</h2>
+	<h3>Title</h3>
+	<h4>Title</h4>
+	<h5>Title</h5>
+	<h6>Title</h6>
+
+	<h1>기업명 또는 서비스명</h1>
+
+	<h1>
+		<a href="https://www.naver.com/">
+			<img src="https://www.pikpng.com/pngl/m/194-1945877_paula-red-apple-apple-paula-red-apple-png.png" alt="애플">
+		</a>
+	</h1>
+
+	<h3>Service</h3>
+	<h5>Service 부제</h5>
+
+	<h6>Commerce</h6>
+	<h6>Design</h6>
+	<h6>Scurity</h6>
+
+	<h3>Portifoloi</h3>
+
+	-->
+
+	<!--여러 개의 공백이 있어도 하나의 공백으로 인식 -->
+	<!--
+	<p>Nice to meet you</p>
+	-->
+
+	<!-- sapn: 단어로서 표기하거나 디자인을 적용하고 싶을 때 -->
+	<!-- mark: 특정 단어를 강조할 떄 -->
+	<!--
+	<span>사과</span>
+	<p>
+		<span>동해물</span>과 백두산이 마르고 닳도록
+	</p>
+
+	<p><mark>사과</mark>는 사과 나무에서 나는 열매이다.</p>
+	-->
+
+	<!-- ol: 순서가 있는 리스트(목차) -->
+	<!-- ul: 순서가 없는 리스트 -->
+	<!-- ol 및 ul태그 안에는 꼭 li태그가 앞에 있어야 한다 -->
+	<!--
+	<ol>
+		<li>메뉴1</li>
+		<li>메뉴2</li>
+		<li>메뉴3</li>
+	</ol>
+
+	<ul>
+		<li>메뉴1</li>
+		<li>메뉴2</li>
+		<li>메뉴3</li>
+	</ul>
+	-->
+
+	<!-- #: href의 링크값이 아직 정해지지 않았을 때(기본값) -->
+	<!--
+	<ul>
+		<li><a href="#">영화</a></li>
+		<li><a href="#">부동산</a></li>
+		<li><a href="#">음악</a></li>
+	</ul>
+
+
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	-->
+
+	<!-- button: 버튼을 만들어주는 태그 -->
+	<!-- submit: 입력된 정보를 서버에 전달할 때 -->
+	<!--
+	<button type="button">닫기</button>
+	<button type="submit">확인</button>
+	-->
+
+	<!-- video: 동영상을 삽입해주는 태그 -->
+	<!-- controls: 플레이 버튼 활성화 -->
+	<!-- autoplay: 자동 재생(muted속성도 같이 사용해야 활성화됨) -->
+	<!-- loop: 반복 재생 -->
+	<!--
+	<video src="sample.mp4" controls 
+		   autoplay muted
+		   loop
+		   width="300px"
+		   height="300px" 
+	>
+		
+	</video>
+	-->
+
+	<!-- iframe: 유튜브 영상을 삽입해주는 태그 -->
+	<!-- width 및 height 속성값은 px단위 생략 가능 -->
+	<!--
+	<iframe width="800" height="700" 
+			src="https://www.youtube.com/embed/BWqEVkCw6vk" 
+			title="YouTube video player" 
+			frameborder="0" 
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen
+			>
+	</iframe>
+	-->
+
+	<!-- audio: 오디오를 삽입해주는 태그 -->
+	<!-- audio 태그는 autoplay 속성 미지원 -->
+	<!--
+	<audio src="sample_audio.mp3" controls muted loop>
+	</audio>
+	-->
+
+	<!-- 메인 페이지는 index.html 파일로 작업한다 -->
+
+</body>
+</html>

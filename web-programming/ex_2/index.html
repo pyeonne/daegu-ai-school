@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>2회차 HTML 강의</title>
+
+	<style type="">
+		
+		tr, td, th {
+			border: solid 1px #000000;
+		}
+
+		span {
+			width: 300px;
+			height: 300px;
+			background-color: yellow;
+
+			margin-top: 100px;
+			margin-bottom: 100px;
+
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+
+		h1 {
+			width: 300px;
+			height: 300px;
+			background-color: yellow;
+
+			margin-top: 100px;
+			margin-bottom: 100px;
+
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<!-- <form method="post"> -->
+
+		<!--
+			label: 입력칸을 대표하는 제목이나 이름의 역할. 말 그대로 라벨링을 한 것.
+			required: 필수 정보 입력. <form method="post"></form>와 같이 사용
+		-->
+		<!-- <label for="name">이름</label> --?
+		<!--
+			input: type의 속성에 따라 입력형태가 달라짐
+			label의 for 속성과 input의 id 속성에 'name'이라는 동일한 값을 넣으면
+			이름 텍스트를 클릭해도 포커싱이 된다
+			minlingth: 최소 글자 수
+			maxlength: 최대 글자 수
+		-->
+		<!-- <input type="text" placeholder="이름을 입력하세요." id="name" required
+			   minlength="2" maxlength="8" --? 
+		>
+		-->
+		<!--
+			placeholder: 안내문구를 넣을 수 있다
+		-->
+		<!--
+		<label for="mail">이메일</label>
+		<input type="email" placeholder="이메일을 입력하세요." id="mail" required
+					minlength="10" maxlength="15"
+		>
+	    -->	
+
+		<!--
+			input의 type 속성값을 password로 주면 입력값이 보이지 않는다
+		-->
+		<!-- 
+		<label for="pw">비밀번호</label>
+		<input type="password" placeholder="최소 6글자, 최대 12글자" id="pw" required>
+		-->
+
+		<!--
+			min: 시작값을 설정
+		  	max: 숫자가 증가할 수 있는 최댓값
+		  	step: 설정한 값만큼 증가
+		-->
+		<!--
+		<label for="num">숫자</label>
+		<input type="number" placeholder="숫자만 입력" id="num" min="10" max="40" step="5">
+		-->
+
+		<!--
+			accept: 업로드할 파일의 확장명을 지정할 수 있다
+		-->
+		<!--
+		<label for="upload">파일 업로드</label>
+		<input type="file" id="upload" accept="image/png, image/jpg, image/gif">
+
+		<button type="submit">제출</button>
+
+	</form>
+	-->
+
+	<!--
+		name: 서버에 보낼 데이터를 그룹화시키는 기능
+		value: 서버에 보낼 데이터값
+	-->
+	<!--
+	<label for="n1">한국</label>
+	<input type="checkbox" id="n1" name="country" value="한국">
+	<label for="n2">일본</label>
+	<input type="checkbox" id="n2" name="country" value="일본">
+	<label for="n3">중국</label>
+	<input type="checkbox" id="n3" name="country" value="중국">
+	-->
+
+	<!-- 
+		radio: 단일체크기능
+		checked: 체킹되어 있는 상태로 노출
+	-->
+	<!--
+	<label for="n1">한국</label>
+	<input type="radio" id="n1" name="country" value="한국" checked>
+	<label for="n2">일본</label>
+	<input type="radio" id="n2" name="country" value="일본">
+	<label for="n3">중국</label>
+	<input type="radio" id="n3" name="country" value="중국">
+	-->
+
+	<!--
+		textarea: 장문의 글을 작성할때
+		cols: textarea의 넓이. 최대 몇자의 글자를 넣을 것인지
+		rows: 최대 몇줄의 글을 넣을 것인지
+	-->
+	<!--
+	<label for="content">문의 내용</label>
+	<textarea id="content" cols="40" rows="8"></textarea>
+	-->
+
+	
+	<!--
+		select: 드롭다운 메뉴를 만들때
+		selected: 가장 먼저 보여줘라
+		disabled: 선택은 할 수 없게 만드는 장치
+		select태그 안에는 option태그가 와야한다
+	-->
+	<!--
+	<select name="job">
+		<option selected disabled>직업을 선택해주세요.</option>
+		<option value="학생">학생</option>
+		<option value="회사원">회사원</option>
+		<option value="기타">기타</option>
+	</select>
+	-->
+
+	
+	<!-- 
+		caption: 테이블의 제목
+		rowspan: 줄병합
+		colspan: 열병합
+	-->
+	<!--
+	<table>
+		<caption>상품 정보</caption>
+		<thead>
+			<tr>
+				<th>상품</th>
+				<th>색상</th>
+				<th>가격</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>맥북 프로 16인치</td>
+				<td>그레이</td>
+				<td>3,000원</td>
+			</tr>
+			<tr>
+				<td rowspan="2">아이패드 프로 12인치</td>
+				<td>레드</td>
+				<td>1,000원</td>
+			</tr>
+			<tr>
+				<td>블루</td>
+				<td>1,000원</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td colspan="2">총 가격</td>
+				<td>5,000원</td>
+			</tr>
+		</tfoot>
+	</table>
+    -->
+
+    <!--
+    	웹사이트는 곤충의 머리 배 몸으로 나뉘어져있는 것과 같다
+    	header: 상단. 웹사이트가 처음 보여지는 부분
+    -->
+    <!--
+    <header>
+
+    	<h1>
+    		<a href="#">
+    			<img>
+    		</a>
+    	</h1>
+
+    	<nav>
+    		<ul>
+    			<li><a href="#">메뉴1</a></li>
+    			<li><a href="#">메뉴2</a></li>
+    			<li><a href="#">메뉴3</a></li>
+    		</ul>	
+    	</nav>
+
+    </header>
+	-->
+
+    <!--
+    	main: 본문
+    	role: 익스플로러한테 이게 메인이다라고 알려주는 속성. 꼭 들어가야됨
+    	article: 실제 정보가 들어가는 공간
+    -->
+    <!--
+    <main role="main">
+    	<section>
+    		<h2>Service</h2>
+    	</section>
+
+    	<section>
+    		<h2>Portfolio</h2>
+    	</section>
+
+    	<article>
+    		<h2>Article title</h2>
+    		<p>Nice to meet you</p>
+    	</article>
+    </main>
+	-->
+
+    <!--
+    	aside: 본문 정보와 관계성이 떨어지는 내용을 주로 넣는다
+    	footer: 사이트 하단에 있는 정보
+    -->
+    <!--
+    <aside></aside>
+
+    <footer></footer>
+	-->
+
+    <!--
+    	header, main, footer: 설계 도면에 나타나는 공간. HTML5에서 새롭게 등장한 태그
+    	div: 설계 도면에 나타나지 않는 세부 요소들 ex. tv위치, 식탁위치
+    -->
+    <!--
+
+    <div></div>
+	-->
+
+  	<!-- 설계도면은 디자이너에 따라 달라진다. 정답은 없으므로 겁먹을 필요없음 
+		 w3school -> html reference-> html tags list 참고
+		 자주사용하는 태그를 기억하고 모르는 태그가 있으면 그때그때마다 공부해라
+		 not supported는 HTML5에서 사용할 수 없는 태그
+  	-->
+
+  	<!-- Inline / Block -->
+  	<!-- 
+  	Inline: 줄바꿈 없음, 공간의 크기를 설정할 수 없음(하이라이터만 쳐짐), 상하배치작업 불가
+  	Block: 줄바꿈 있음, 공간을 만들 수 있다,상하배치작업 가능
+
+  	-->
+  	<span>Inline</span>
+  	<span>Inline</span>
+  	<span>Inline</span>
+
+  	<h1>Block</h1>
+  	<h1>Block</h1>
+  	<h1>Block</h1>
+
+</body>
+</html>

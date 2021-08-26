@@ -1,0 +1,301 @@
+/* intro */
+
+#intro .introWrap .lion {
+    animation: spinLion 1500ms linear infinite alternate
+}
+
+@keyframes spinLion {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+#intro .introWrap .rabbit {
+    animation: spinRabbit 1000ms linear infinite alternate
+}
+
+@keyframes spinRabbit {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(5deg);
+    }
+}
+
+#intro .introWrap .bear {
+    animation: spinBear 1000ms linear infinite alternate
+}
+
+@keyframes spinBear {
+    from {
+        transform: rotate(10deg);
+    }
+
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+#intro .introWrap .monkey {
+    animation: spinMonkey 800ms linear infinite alternate
+}
+
+@keyframes spinMonkey {
+    from {
+        transform: rotate(20deg);
+    }
+
+    to {
+        transform: rotate(50deg);
+    }
+}
+
+/* 구름이 좌우로 갈라지는 건 자바스크립트 기능이므로 실습에서 제외 ㅠ */
+
+
+#intro .cloudWrap .dragonfly {
+    animation: flyDragonfly linear 7s infinite;
+}
+
+@keyframes flyDragonfly {
+    from {
+        /* 
+        .dragonfly CSS의 width값만큼 
+        키프레임 안에 속성들도 기본적으로
+        .dragonfly CSS 포지션 속성에 영향을 받게 되어 있다.
+        그래서 left 속성을 사용할 수 있는 것.
+        */
+        left: -366px;
+    }
+
+    to {
+        /*
+        잠자리의 왼쪽 면을 기준으로 100퍼센트 오른쪽으로 이동하고
+        항상 브라우저 화면 바깥쪽에서 잠자리가 사라짐
+        사라짐과 동시에 잠자리가 왼쪽에서 다시 나타남
+        px로 지정하면 잠자리가 빨리 안타나는 경우가 있어 %단위로 설정함
+        바디태그에 overflow:hidden을 적용하지 않으면 잠자리가 오른쪽으로 완전히 넘어갈때
+        가로 스크롤 생겨버림. 그래서 꼭 기본값으로 적용해야함
+        */
+        left: 100%;
+    }
+}
+
+
+#farm3 .machineWrap .timer {
+    animation: rotateTimer 10000ms linear infinite;
+}
+
+/* 타이머의 회전효과가 시계방향으로 진행 */
+@keyframes rotateTimer {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 톱니바퀴1도 시계방향 */
+#farm3 .machineWrap .saw1 {
+    animation: rotateLeftSaw 10000ms linear infinite;
+}
+
+@keyframes rotateLeftSaw {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 톱니바퀴2는 반시계방향 */
+#farm3 .machineWrap .saw2 {
+    animation: rotateRightSaw 10000ms linear infinite;
+}
+
+@keyframes rotateRightSaw {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+#forest1 .treeWrap .rabbit1 {
+    animation: spinRabbitOne 1000ms linear infinite alternate;
+}
+
+@keyframes spinRabbitOne {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(10deg);}
+}
+
+#forest1 .treeWrap .rabbit2 {
+    animation: spinRabbitTwo 1000ms linear infinite alternate;
+}
+
+@keyframes spinRabbitTwo {
+    from {transform: rotate(10deg);}
+    to {transform: rotate(0deg);}
+}
+
+
+
+
+#forest2 .machineWrap2 .machineLeft {
+    animation: moveLeft 1s linear infinite alternate;
+}
+
+@keyframes moveLeft {
+    from {left: 30px;}
+    to {left: 0;}
+}
+
+#forest2 .machineWrap2 .machineRight {
+    animation: moveRight 1s linear infinite alternate;
+}
+
+@keyframes moveRight {
+    from {left: -30px;}
+    to {left: 0;}
+}
+
+
+
+#forest3 .forest3Wrap .smallBird {
+    animation: spinSmallBird 1000ms linear infinite alternate;
+}
+
+@keyframes spinSmallBird {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(10deg);}
+}
+
+#forest3 .forest3Wrap .bigBird {
+    animation: spinBigBird 1000ms linear infinite alternate;
+}
+
+@keyframes spinBigBird {
+    from {transform: rotate(-10deg);}
+    to {transform: rotate(10deg);}
+}
+
+
+
+
+
+#science .scienceWrap .gly {
+    animation: spinGly 1500ms linear infinite alternate;
+}
+
+@keyframes spinGly {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(50deg);}
+}
+
+#science .scienceWrap .water {
+    animation: spinWater 1500ms linear infinite alternate;
+}
+
+@keyframes spinWater {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-50deg);}
+}
+
+
+
+#night1 .starWrap .star1,
+#night1 .starWrap .star2,
+#night1 .starWrap .star3 {
+    animation: pulseStar 1s linear infinite alternate;
+}
+
+@keyframes pulseStar {
+    from {transform: scale(1);}
+    to {transform: scale(0.8);}
+}
+
+
+
+/* 
+가서 다시 돌아올 필요가 없으므로 alternate 반복효과 적용안함
+moon 요소의 포지션은 static이기 때문에
+left와 같은 속성을 사용할 수 없어 margin-left 속성 사용
+*/
+#night2 .moon {
+    animation: moveMoon linear 10s infinite;
+}
+
+@keyframes moveMoon {
+    from {
+        /* 달의 최초 위치에서 왼쪽으로 135px만큼 더 땡겨준 것 */
+        margin-left: -135px;
+    }
+
+    to {
+        /* 
+        웹 브라우저 화면 오른쪽으로 10% 더 이동시킨 것 
+        달이 화면 밖으로 사라지는 것을 확인
+        */
+        margin-left: 110%;
+    }
+}
+
+
+
+
+
+#morning .sun {
+    /* 
+    달보다 늦게 시작해야되기 때문에 1500ms delay 적용 
+    첫번째 숫자는 duration 그다음은 delay라고 했죠?
+    */
+    animation: moveSun linear 10s 1500ms infinite;
+}
+
+@keyframes moveSun {
+    from {
+        margin-left: -131px;
+    }
+
+    to {
+        margin-left: 110%;
+    }
+}
+
+
+
+/* https://jeremyckahn.github.io/stylie/ 온라인툴 이용해 애니메이션 만들기 */
+#kitchen .steamWrap .bubble1 {
+    animation-name: bubble;
+    animation-duration: 1000ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: 0 0;
+  }
+  @keyframes bubble {
+    0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    100% {transform:translate(-102px, -208px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  }
+  
+
+
+
+
+

@@ -1,0 +1,350 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+실무팁
+display: none; 처리를 하면 화면상에서 나타나지 않는다.
+이 속성을 사용해서 내가 원하는 정보를 내가 원하는 기기에 맞춰서 보여줄 수 있다.
+사실 나이스한 작업은 아니다. 하나의 html에 비슷한 정보가 있다는 건 유쾌하지 않다.
+pc 버전과 모바일 버전을 모두 고려해서 정보를 작성하는 것이 좋다.
+*/
+/* 
+.pc {
+    
+
+    color: red;
+    font-size: 50px;
+    background-color: pink;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+} */
+
+
+/*
+모바일 버전 작업을 하려면 미디어쿼리 코드를 작업해야 한다.
+사용자가 pc로 접속했는지 모바일로 접속했는지 알 수 있는 가장 직관적인 방법은
+사용자가 접속한 기기의 width값을 기준으로 파악할 수 있다.
+320px ~ 768px 미만: 스마트폰
+768px ~ 1024px 미만: 태블릿
+1024xp 이상 : PC
+어떠한 분기점을 설정하는 것이 미디어쿼리다
+
+미디어쿼리 사용 시 주의점
+1. 미디어쿼리 바깥에서 설정한 속성이 미디어쿼리 내에 작성한 속성으로 상속받는다.
+그래서 확인해가며 코딩해야함. 이 방법이 번거로우면 미디어쿼리 바깥 css와 미디어쿼리 안 css 파일을
+따로 만드는 방법도 있음
+2. 미디어쿼리를 사용하면 반드시 넣어야할 meta 태그가 있다.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+viewport - 기기의 화면/접속된 기기의 화면은 웹사이트의 화면이다/비율은 항상 1.0을 유지하겠다
+참고 https://www.w3schools.com/css/css_rwd_viewport.asp
+viewport를 사용하면 사용자가 접속하는 기기에 맞춰 스케일업이 자동으로 된다. 기본값으로 꼭 넣을 것.
+
+@media (min-width: 600px) and (max-width: 767px) {}
+이처럼 실무에서는 min-width와 max-width만 사용하는 것이 일반적이고,
+아래의 사이트에서 나오는 코드처럼 자세하기 작성하는 것은 드물다.
+각 기기별 width사이즈 확인 가능 - https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+print - 사용자가 출력을 하려고 할때
+portrait - 사용자가 스마트폰을 세로로 들었을때
+landscape - 사용자가 스마트폰을 가로로 들었을때
+위의 키워드를 사용해서 하는 것보단 새로운 분기점을 만들어 width값을 설정해서
+세로모드와 가로모드를 작성한다.
+
+내가 작성한 미디어쿼리가 제대로 작동하는지 알수 있는 방법
+1. 제일 정확한 방법은 닷홈같은 호스팅 사이트를 이용해 직접 pc버전과 모바일버전에서 확인하는 것
+단점 - 개인이 가지고 있는 기기가 한정적이다.
+2. 크롬의 검사 기능에서 device toolbar 이용하는 방법
+여러가지 기기화면을 확인할 수 있고 원하는 기기가 없다면 직접 커스터마이징 할 수 있다.
+
+다른 개발자가 만든 미디어쿼리 코드 확인하는 방법
+특정 width값이 될 때마다 작성한 미디어쿼리코드를 검사에서 확인가능하므로,
+직접 웹 브라우저의 크기를 늘렸다 줄였다 해보며 확인해야 한다.
+약간은 번거롭지만..
+*/
+
+
+
+/* 
+@media (min-width: 300px) and (max-width: 767px) {
+    .pc {
+        color: blue;
+        font-size: 20px;
+        background-color: yellow;
+    }
+} */
+
+/* 
+@media (min-width: 100px) and (max-width: 599px) {
+    .pc {
+        color: green;
+        font-size: 10px;
+        background-color: gray;
+    }
+} */
+
+/* 모바일 */
+/* 
+h1 {
+    font-size: 20px;
+    background-color: yellow;
+} */
+
+/* 
+width값이 768px보다 작아지면 미디어쿼리 바깥 속성이 적용됨 
+media 내부 pc 버전/media 외부 모바일 버전이라 볼 수 있음
+
+min-width값이 더 큰 media 를 만들면 자동적으로
+max-width 1024px 미만
+*/
+/* 태블릿 */
+/* 
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 40px;
+        background-color: pink;
+    }
+}  */
+
+/* PC */
+/* 
+@media (min-width: 1024px) {
+
+    h1 {
+        font-size: 80px;
+        background-color: gray;
+    }
+}  */
+
+
+
+
+
+/* 실습1
+.media-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 700px;
+    background-color: black;
+}
+
+.media-menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.media-menu li {
+    width: 150px;
+    background-color: yellow;
+    border: solid 5px red;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .media-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 190px;
+    }
+
+    .media-menu li {
+        margin-bottom: 10px;
+    }
+
+    .media-menu li:last-child {
+        margin-bottom: 0;
+    }
+
+} */
+
+
+/* 실습2 */
+/* PC */
+/* 
+.intro {
+    display: flex; */
+    /* 스크롤을 아래로 내려도 상단바 고정 */
+    /* position: fixed;
+
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+}
+
+.intro h1 {
+    width: 50%;
+    height: 80px;
+    background-color: black;
+}
+
+.intro nav {
+    width: 50%;
+    height: 80px;
+    background-color: yellow;
+}
+
+.intro nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.intro nav ul {
+    display: flex;
+}
+
+.intro nav ul  li { */
+    /* 3등분을 정확한 수치로 나타낼 수 없게 때문에 최대한 근접하게 소숫점 4자리까지 사용 */
+    /* width: 33.3333%;
+    height: 80px;
+}
+
+.intro nav ul li:nth-child(1) {
+    background-color: blue;
+}
+
+.intro nav ul li:nth-child(2) {
+    background-color: gray;
+}
+
+.intro nav ul li:nth-child(3) {
+    background-color: green;
+}
+
+
+main {
+    width: 100%;
+    height: 2000px;
+    background-color: gold;
+
+    padding-top: 80px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .intro { */
+        /* 스크롤시 상단바 고정 해제 */
+        /* position: static;
+        flex-direction: column;
+        height: 160px;
+    }
+
+    .intro h1 {
+        width: 100%;
+    }
+
+    .intro nav {
+        width: 100%;
+    } */
+
+    /* 상단바 고정을 해제하면 겹쳐지는 현상이 없어지므로 padding-top 0 적용 */
+    /* main {
+        padding-top: 0;
+    }
+} */
+
+
+/* 실습3 */
+/* .container {
+    display: flex;
+    자동 줄바꿈
+    flex-wrap: wrap;
+    요소간 동일한 여백으로 띄우기
+    justify-content: space-between;
+
+    width: 1140px;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+.column {
+    width: 355px;
+    background-color: #ffffff;
+    border: solid 2px red;
+    margin-bottom: 10px;
+}
+
+.column:nth-child(4),
+.column:nth-child(5),
+.column:nth-child(6) {
+    margin-bottom: 0;
+}
+
+.column img {
+    column width값만큼 늘이기
+    width: 100%;
+    vertical-align: middle;
+}
+
+.image-info {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.image-info h2 {
+    margin: 0;
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+    .container {
+        width: 730px;
+    }
+
+    .column:nth-child(4) {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 539px) {
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+
+        padding: 0 20px;
+    }
+
+    .column {
+        width: 100%;
+    }
+    .column:nth-child(4),
+    .column:nth-child(5) {
+        margin-bottom: 10px;
+    }
+} */
+
+
+/*
+1. style.css 내에 미디어 쿼리로 모바일 버전 분기점 만들기
+2. mobile.css 파일을 따로 만들어 html 파일에 link하기
+3. html 파일 내에 style 태그를 사용해 media 속성에 직접 스타일 속성 적용하기
+
+강사님의 경우 코드 분량이 길어지고(2000줄이상) 유지보수 관리를 위해 파일을 따로 만드는 편
+여러분은 첫번째 두번째 방법만 기억해주시면 되요
+*/
+@media (min-width: 320px) and (max-width: 539px) {
+
+}

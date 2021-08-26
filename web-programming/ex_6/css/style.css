@@ -1,0 +1,164 @@
+.transform {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+
+    /* 
+    <transform 속성>
+
+    rotate()
+    선택된 영역의 2차원적인(평면) 회전 효과를 적용할 때
+    양수를 전달하면 오른쪽, 음수를 전달하면 왼쪽으로 회전한다.
+
+    scale()
+    선택된 영역의 가로와 세로의 크기를 비율로서 변경하고 싶을 때
+
+    skew()
+    선택된 영역의 3차원적인 회전 효과를 적용할 때
+    첫번째값은 x축 기준으로 회전, 두번째값은 y축 기준으로 회전
+    음수를 전달하면 반대로 회전한다.
+
+    translate()
+    선택된 영역의 오브젝트의 위치를 변경할 때
+    첫번째값은 x축, 두번째값은 y축 기준으로 움직인다.
+    */
+    /* transform: rotate(-10deg); */
+    /* transform: scale(2, 3); x축(가로)을 2배, y축(세로)을 3배 키우겠다는 의미 */
+    /* transform: scale(0.5, 0.5); 150x150 사이즈로 작아짐 */
+    /* transform: skew(-10deg, 20deg); */
+    /* transform: translate(100px, 300px); */
+
+    /* margin-left: 300px; */
+    /* margin-top: 800px; */
+
+    /*
+    transform 속성 사용시 유의사항
+    transform 속성은 익스플로러 10.0 이상에서만 사용가능하다.
+    익스플로러 9.0 버전에서 사용하려면 prifix를 앞에 붙여야 한다. 일종의 접두사.
+    그 이하의 버전은 사용할 수 없다.
+    각각의 웹브라우저 prefix를 앞에 붙여 작성하고
+    마지막에 디폴트값으로 접두사를 붙이지않은 transform 속성을 작성해주면 된다.
+    */
+    /* -webkit-transform: rotate(10deg); 크롬, 사파리 */
+    /* -moz-transform: rotate(10deg); 파이어폭스 */
+    /* -ms-transform: rotate(10deg); 익스플로러 */
+    /* -o-transform: rotate(10deg); 오페라 */
+    transform: rotate(10deg);
+}
+
+
+/*
+<transition 속성>
+애니메이션이 변화하는 과정을 자세하게 보고 싶을 때 
+*/
+.transition {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+
+    /* 
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s; */
+    /*
+    위의 속성들을 transition 단축 속성을 이용해 간결하게 작성 가능 
+    duration과 delay 속성 순서를 주의해라.
+    여러개 속성을 움직이게 하고 싶으면 콤마(,) 사용
+    */
+    transition: width 2s linear, height 2s linear;
+}
+
+.transition:hover {
+    width: 600px;
+    height: 600px;
+}
+
+.animation {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+
+    animation-name: changeWidth; /*원하는 이름*/
+    animation-duration: 3s; /*애니메이션 동작하는 전체 시간*/
+    animation-timing-function: linear; /*일정한 속도*/
+    animation-delay: 1s;
+
+    /* 
+    animation-iteration-count: 6; 애니메이션 진행횟수 
+    infinite 무한반복
+    */
+    animation-iteration-count: infinite;
+
+    /*
+    애니메이션 진행방향. 
+    nomal 정방향
+    alternate 반복효과 from에서 to, to에서 from으로 가는 걸 따로 하나로 친다. 총 3회반복
+    */
+    animation-direction: alternate; 
+}
+
+/*
+애니메이션이 실제 발동하는 형태 
+from = 0%
+to = 100%
+숫자를 사용해서 애니메이션의 시작과 끝을 나타낼 수 있으면, 중간 지점들도 숫자로 표현가능
+*/
+@keyframes changeWidth {
+    0% {
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        width: 600px;
+        height: 600px;
+        background-color: red;
+        border: solid 10px blue;
+    }
+}
+
+.spin-lion {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+
+    /* animation 속성도 단축 속성이 있음. duration 다음에 delay 라는 거 순서 꼭 기억
+    animation-name: spinLion;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+
+    -webkit-animation: spinLion 1.5s linear infinite alternate 1s;
+    animation: spinLion 1.5s linear infinite alternate 1s;
+
+}
+
+/* prefix를 사용하면 다 달아줘야됨 */
+@-webkit-keyframes spinLion {
+    from {
+        -webkit-transform: rotate(-10deg);
+    }
+
+    to {
+        -webkit-transform: rotate(10deg);
+    }
+}
+
+@keyframes spinLion {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+/* 애니메이션 효과 코드 쉽게 작성하기 https://jeremyckahn.github.io/stylie/ */
