@@ -9,6 +9,7 @@ html,
 body {
     width: 100%;
     height: 100%;
+    background-color: #212121; /* 브라우저 상에 스크롤이 생겨 body 영역의 하얀 배경이 보여서 body 배경도 색상을 설정함 */
 }
 
 ol,
@@ -73,6 +74,7 @@ input:focus {
     height: 56px;
     background-color: #212121;
     padding: 0 16px;
+    z-index: 999;
 }
 
 #youtube-top-nav .nav-left {
@@ -153,6 +155,7 @@ input:focus {
 }
 
 #youtube-top-nav .nav-right .btn-login {
+    display: inline-block;
     border: solid 1px #3ea6ff;
     padding: 10px 12px 8px;
     font-size: 14px;
@@ -181,7 +184,89 @@ input:focus {
     position: absolute; /* 스크롤 뒷쪽으로 콘텐츠가 겹쳐지는 현상이 발생 */
     width: 230px;
     height: 100%;
-    background-color: gray;
+}
+
+#youtube-left-content .nav-section {
+    padding: 8px 0;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+#youtube-left-content .nav-section .nav-title-wrap {
+    padding: 8px 24px;
+}
+
+#youtube-left-content .nav-section .nav-title-wrap h2 {
+    color: #aaa;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#youtube-left-content .nav-section .nav-body {
+}
+
+#youtube-left-content .nav-section .nav-body ul {
+}
+
+#youtube-left-content .nav-section .nav-body li {
+}
+
+#youtube-left-content .nav-section .nav-body li a {
+    height: 40px;
+    padding: 0 24px;
+}
+
+#youtube-left-content .nav-section .nav-body li .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    margin-right: 24px;
+}
+
+#youtube-left-content .nav-section .nav-body li span {
+    font-size: 13px;
+    color: #fff;
+}
+
+#youtube-left-content .nav-section .nav-body .txt-wrap {
+    padding: 0 24px;
+}
+
+#youtube-left-content .nav-section .nav-body .txt-wrap p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#youtube-left-content .nav-section .nav-body .txt-wrap .btn-login {
+    display: inline-block; /* 높이값을 제대로 인식하지 못해서 설정함 */
+    border: solid 1px #3ea6ff;
+    padding: 10px 12px 8px;
+    font-size: 14px;
+    color: #3ea6ff;
+    margin-top: 12px;
+}
+
+#youtube-left-content #youtube-footer {
+    padding-bottom: 150px;
+}
+
+#youtube-left-content #youtube-footer .txt-wrap {
+    padding: 12px 24px 0;
+}
+
+#youtube-left-content #youtube-footer .txt-wrap a {
+    margin-right: 8px;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 500;
+    word-break: keep-all; /* 줄바꿈에 영향을 주는 CSS 속성으로 단어를 기준으로 줄바꿈이 되도록 설정함 */
+}
+
+#youtube-left-content #youtube-footer .txt-wrap p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #aaa;
 }
 
 /* Youtube Main */
@@ -191,5 +276,96 @@ input:focus {
     top: 56px;
     right: 0;
     bottom: 0;
-    background-color: gray;
+    background-color: #212121;
+}
+
+#youtube-main-content {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+}
+
+#youtube-main-content ul {
+    align-items: flex-start;
+    align-content: flex-start; /* stretch 속성때문에 불필요한 margin-bottom이 생김 */
+    width: 100%;
+    height: 100%;
+}
+
+#youtube-main-content ul li {
+    width: 24%;
+    background-color: #212121;
+    margin-bottom: 40px;
+}
+
+#youtube-main-content ul li .video-thumbnail {
+    width: 100%;
+}
+
+#youtube-main-content ul li .video-thumbnail a {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+#youtube-main-content ul li .video-thumbnail img {
+    width: 100%;
+}
+
+#youtube-main-content ul li .video-thumbnail .time {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    color: #fff;
+    padding: 3px 4px;
+    bottom: 4px;
+    right: 4px;
+}
+
+#youtube-main-content ul li .video-txt-wrap {
+    align-items: flex-start;
+    margin-top: 12px;
+}
+
+#youtube-main-content ul li .video-txt-wrap .image-link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+}
+
+#youtube-main-content ul li .video-txt-wrap .image-link img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#youtube-main-content ul li .video-txt-wrap .txt {
+    width: calc(100% - 48px);
+}
+
+#youtube-main-content ul li .video-txt-wrap .txt h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+#youtube-main-content ul li .video-txt-wrap .txt .title-link {
+    color: #fff;
+}
+
+#youtube-main-content ul li .video-txt-wrap .txt p {
+    font-size: 12px;
+}
+
+#youtube-main-content ul li .video-txt-wrap .txt p .channel-link {
+    color: #aaa;
+}
+
+#youtube-main-content ul li .video-txt-wrap .txt .txt-bottom {
+}
+
+#youtube-main-content ul li .video-txt-wrap .txt .txt-bottom .count,
+#youtube-main-content ul li .video-txt-wrap .txt .txt-bottom .date {
+    font-size: 12px;
+    color: #aaa;
 }
