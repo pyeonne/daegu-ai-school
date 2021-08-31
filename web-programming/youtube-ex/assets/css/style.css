@@ -369,3 +369,358 @@ input:focus {
     font-size: 12px;
     color: #aaa;
 }
+
+/* Youtube Channel Page */
+#youtube-channel-content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#channel-banner {
+    width: 100%;
+    height: 250px;
+    background-color: darkblue;
+}
+
+#channel-header {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    background-color: rgba(24, 24, 24, 1);
+}
+
+.channel-container {
+    width: 1284px;
+}
+
+#channel-header .channel-profile-wrap {
+}
+
+#channel-header .channel-profile-wrap .channel-wrap {
+}
+
+#channel-header .channel-profile-wrap .channel-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 24px;
+}
+
+#channel-header .channel-profile-wrap .channel-profile .txt-wrap h2 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#channel-header .channel-profile-wrap .channel-profile .txt-wrap p {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#channel-header .channel-profile-wrap .btn-subscribe {
+    padding: 10px 20px;
+    background-color: red;
+    border-radius: 5px;
+
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Channel Nav */
+#channel-nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(24, 24, 24, 1);
+}
+
+#channel-nav ul {
+}
+
+#channel-nav li a {
+    display: block;
+    height: 47px;
+    line-height: 47px;
+    padding: 0 32px;
+    border-bottom: solid 2px transparent;
+    color: #aaa;
+}
+
+#channel-nav li a:hover {
+    color: #fff;
+}
+
+#channel-nav li a.active {
+    border-bottom: solid 2px #fff;
+    color: #fff;
+}
+
+/* Channel Content */
+#channel-content {
+    display: flex;
+    justify-content: center;
+}
+
+#channel-recent {
+    align-items: flex-start;
+    border-bottom: solid 1px #aaa;
+    padding: 24px 0;
+}
+
+#channel-recent .thumbnail-wrap {
+    position: relative;
+    width: 246px;
+    height: 148px;
+    margin-right: 16px;
+}
+
+#channel-recent .thumbnail-wrap img {
+    width: 100%;
+    height: 100%;
+}
+
+#channel-recent .thumbnail-wrap .mark {
+    position: absolute;
+    background-color: red;
+    font-size: 12px;
+    color: #fff;
+    padding: 4px 8px 2px;
+    border-radius: 5px;
+    right: 4px;
+    bottom: 4px;
+}
+
+#channel-recent .txt-wrap {
+    width: 600px;
+}
+
+#channel-recent .txt-wrap h2 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+}
+
+#channel-recent .txt-wrap .channel {
+    font-size: 14px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+#channel-recent .txt-wrap .description {
+    font-size: 12px;
+    color: #fff;
+}
+
+.channel-playlists-section {
+    padding: 24px 0;
+    border-bottom: solid 1px gray;
+}
+
+.channel-playlists-section .playlists-header {
+}
+
+.channel-playlists-section .playlists-header h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.channel-playlists-section .playlists-header .play-wrap {
+    width: 100px;
+}
+
+.channel-playlists-section .playlists-header .play-wrap .icon-play {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+}
+
+.channel-playlists-section .playlists-header .play-wrap .play-link {
+    font-size: 14px;
+    color: #aaa;
+    margin-left: 8px;
+}
+
+.channel-playlists-section .playlists-body {
+    margin-top: 24px;
+}
+
+.playlists-body li {
+    width: 210px;
+}
+
+.playlists-body li .channel-thumbnail {
+    width: 100%;
+    height: 118px;
+}
+
+.playlists-body li .channel-thumbnail a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.playlists-body li .channel-thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.playlists-body li .channel-thumbnail .time {
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+    background-color: #000;
+    padding: 4px 8px 2px;
+    border-radius: 5px;
+    right: 4px;
+    bottom: 4px;
+}
+
+.channel-txt-wrap {
+    margin-top: 8px;
+}
+
+.channel-txt-wrap h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.channel-txt-wrap h3 a {
+    color: #fff;
+}
+
+.channel-txt-wrap p {
+    font-size: 12px;
+}
+
+.channel-txt-wrap p a {
+    color: #aaa;
+}
+
+.channel-txt-wrap .txt-bottom .count,
+.channel-txt-wrap .txt-bottom .date {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Explore Page */
+.explore-container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#explore-nav {
+    padding: 12px 0 8px;
+}
+
+#explore-nav li {
+    overflow: hidden;
+    width: 210px;
+    height: 116px;
+}
+
+#explore-nav li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+#explore-nav li a:hover {
+    background-color: darkgray;
+}
+
+#explore-nav li .icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    margin-bottom: 25px;
+}
+
+#explore-nav li span {
+    color: #fff;
+    font-size: 16px;
+}
+
+#popular-section {
+    margin-top: 24px;
+}
+
+#popular-section li {
+    margin: 16px 0;
+}
+
+#popular-section a {
+    align-items: flex-start;
+}
+
+#popular-section h2 {
+    font-size: 20px;
+    color: #fff;
+}
+
+#popular-section ul {
+    font-size: 24px;
+}
+
+#popular-section .image-wrap {
+    position: relative;
+    width: 246px;
+    height: 148px;
+    margin-right: 16px;
+}
+
+#popular-section .image-wrap img {
+    width: 100%;
+    height: 100%;
+}
+
+#popular-section .image-wrap .time {
+    position: absolute;
+    padding: 4px 8px 2px;
+    background-color: #212121;
+    color: #fff;
+    font-size: 12px;
+    right: 4px;
+    bottom: 4px;
+    border-radius: 5px;
+}
+
+#popular-section .txt-wrap {
+    width: 600px;
+}
+
+#popular-section .txt-wrap h3 {
+    font-size: 20px;
+    color: #fff;
+}
+
+#popular-section .txt-wrap .video-info {
+    color: #aaa;
+    font-size: 14px;
+}
+
+#popular-section .txt-wrap .video-info span::after {
+    display: inline-block;
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: #aaa;
+    border-radius: 50%;
+    margin: 6px 4px 0 8px;
+    vertical-align: top;
+}
+
+#popular-section .txt-wrap .video-info span:last-child:after {
+    content: none;
+}
+
+#popular-section .txt-wrap .description {
+    padding-top: 8px;
+    font-size: 14px;
+    color: #aaa;
+}
