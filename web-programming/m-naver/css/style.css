@@ -510,3 +510,220 @@ Mac 사용자는 스크롤바 없이 트랙패드로 스와이프 가능하므�
     font-weight: 400;
     color: #03c95b;
 }
+
+/* Talk */
+/* float 속성의 영향으로 레이아웃이 틀어지는 현상을 이용해서 레이아웃 배치 작업을 함 */
+#talk {
+    padding: 20px 0;
+}
+
+#talk ul {
+    overflow: hidden; /* float 속성의 영향으로 자식 요소의 높이값을 제대로 인식못하는 현상을 해결함 */
+}
+
+#talk li {
+    position: relative;
+    width: 277px;
+    background-color: #fff;
+    padding: 15px 0 15px;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 4%);
+    margin-bottom: 12px;
+}
+
+#talk li:last-child {
+    margin-bottom: 0;
+}
+
+#talk li a {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+    color: black;
+}
+
+#talk .icon-arrow {
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+}
+
+#talk .txt-wrap h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#talk .txt-wrap p {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 3px;
+}
+
+#talk .content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+#talk img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+#talk .left-list {
+    float: left;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+#talk .left-list .icon-arrow-left {
+    background-color: purple;
+}
+
+#talk .left-list h3 {
+    color: purple;
+}
+
+#talk .left-list img {
+    margin-left: 8px;
+}
+
+#talk .right-list {
+    float: right;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+#talk .right-list .icon-arrow-right {
+    background-color: #0ac666;
+}
+
+#talk .right-list h3 {
+    color: #0ac666;
+}
+
+#talk .right-list img {
+    margin-right: 8px;
+}
+
+/* Today */
+#today {
+    padding: 50px 0;
+}
+
+#today .container {
+    padding: 0 20px;
+}
+
+#today .content-body {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 4%);
+}
+
+#today .content-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    padding-top: 24px;
+    margin-bottom: 10px;
+    border-top: solid 1px #e0e4ea;
+}
+
+#today .content-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#today .content-header a {
+    color: #767678;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#today .content-body .banner {
+    width: 100%;
+    height: 140px;
+}
+
+#today .content-body .bottom-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    padding: 14px 13px 12px 15px;
+}
+
+#today .content-body .bottom-wrap .icon {
+    display: block;
+    width: 52px;
+    height: 52px;
+    background-color: purple;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+#today .content-body .bottom-wrap h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#today .content-body .bottom-wrap p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #929294;
+}
+
+/* Footer */
+#footer {
+    padding: 35px 0 80px;
+}
+
+#footer .txt-wrap {
+    text-align: center;
+}
+
+#footer .txt-wrap a {
+    position: relative;
+    display: inline-block;
+    padding: 3px 9px;
+    color: #929294;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+#footer .txt-wrap a::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 10px;
+    background-color: #d7dfe7;
+}
+
+/* br 태그가 중간에 들어가면 연속성이 깨진다. */
+#footer .txt-wrap .link a:first-child::before {
+    content: none;
+}
+
+#footer h1 {
+    text-align: center;
+}
+
+#footer img {
+    width: 74px;
+}
