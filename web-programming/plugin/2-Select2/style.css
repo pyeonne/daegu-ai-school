@@ -1,0 +1,20 @@
+select {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    color: red;
+
+    background: yellow;
+    border: solid 2px red;
+}
+
+/* 
+window는 CSS 스타일이 조금 적용되지만, MAC은 CSS 스타일이 아예 적용 안됨
+그래서 select2 플러그인을 사용할 것임
+*/
+option {
+    width: 100px;
+    height: 20px;
+    background: pink;
+    border: solid 2px blue;
+}

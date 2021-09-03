@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="select2.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="jquery-3.6.0.js" defer></script>
+        <script src="select2.js" defer></script>
+        <script src="main.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div style="width: 600px; background: yellow; margin-bottom: 200px">
+            <!--
+            <label for="label-single">
+                Single Element
+                <select class="single-select" id="label-single" disabled>
+                    <option value="사과">사과</option>
+                    <option value="바나나">바나나</option>
+                    <option value="포도">포도</option>
+                </select>
+            </label>
+            -->
+
+            <!-- select에 style 속성으로 CSS 스타일을 직접 적용시킬 수 있다. -->
+
+            <select class="single-select" style="width: 400px" id="label-single">
+                <option value="사과">사과</option>
+                <option value="바나나">바나나</option>
+                <option value="포도">포도</option>
+            </select>
+
+            <select class="multiple-select" multiple="multiple">
+                <option value="토마토">토마토</option>
+                <option value="배추">배추</option>
+                <option value="당근">당근</option>
+                <option value="포도">포도</option>
+                <option value="바나나">바나나</option>
+            </select>
+
+            <!--
+            <select class="single-placeholder"></select>
+            -->
+        </div>
+
+        <button class="set">Set: 포도</button>
+        <button class="on">On</button>
+        <button class="off">Off</button>
+        <button class="destroy">Destroy</button>
+        <button class="re">Re-initialize</button>
+
+        <button class="set-two">Set: 포도, 바나나</button>
+        <button class="clear">Clear</button>
+    </body>
+</html>
